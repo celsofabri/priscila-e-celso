@@ -23,7 +23,10 @@ export const StyledScheduleHeader = styled.header`
   font-size: 20px;
   font-family: ${fonts.primary};
   font-weight: 300;
-  color: #dd9788;
+
+  p {
+    color: #dd9788;
+  }
 
   @media screen and (max-width: 960px) {
     font-size: 16px;
@@ -35,6 +38,7 @@ export const StyledScheduleSubtitle = styled.h3`
   font-size: 28px;
   font-weight: 300;
   text-transform: uppercase;
+  color: #dd9788;
 
   @media screen and (max-width: 960px) {
     font-size: 18px;
@@ -47,6 +51,7 @@ export const StyledScheduleTitle = styled.h2`
   margin: 0;
   font-size: 80px;
   font-family: ${fonts.secondary};
+  color: #fff;
   background-color: #072441;
 
   &:before,
@@ -56,7 +61,7 @@ export const StyledScheduleTitle = styled.h2`
     top: 55%;
     width: 50px;
     height: 1px;
-    background-color: #dd9788;
+    background-color: #fff;
     content: '';
   }
 
