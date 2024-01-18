@@ -4,7 +4,7 @@
  * See: https://www.gatsbyjs.com/docs/browser-apis/
  */
 
-// import 'assets/global/style.css';
+import './src/assets/global/style.css';
 
 // Reset
 import 'normalize.css';

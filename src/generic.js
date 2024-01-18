@@ -69,6 +69,21 @@ export const StyledScheduleTitle = styled.h2`
   @media screen and (max-width: 960px) {
     font-size: 60px;
   }
+
+  @media screen and (max-width: 768px) {
+    &:before {
+      top: 0;
+      left: 50%;
+      margin-left: -25px;
+    }
+
+    &:after {
+      top: auto;
+      bottom: 10px;
+      right: 50%;
+      margin-right: -25px;
+    }
+  }
 `;
 
 export const StyledScheduleContent = styled.div`
@@ -181,6 +196,26 @@ export const StyledTimerTitle = styled.h2`
 
   @media screen and (max-width: 960px) {
     font-size: 60px;
+  }
+
+  @media screen and (max-width: 768px) {
+    &:before,
+    &:after {
+      width: 50px;
+    }
+
+    &:before {
+      top: 0;
+      left: 50%;
+      margin-left: -25px;
+    }
+
+    &:after {
+      top: auto;
+      bottom: 10px;
+      right: 50%;
+      margin-right: -25px;
+    }
   }
 `;
 
