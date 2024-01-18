@@ -163,7 +163,7 @@ const Home = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                Ver mapa
+                Veja como chegar
               </a>
             </StyledAddressInfo>
           </StyledAddressContent>
