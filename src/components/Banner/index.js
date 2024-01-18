@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { format } from 'date-fns';
-import {
-  StyledWrapper
-} from 'generic';
+import { StyledWrapper } from 'generic';
 import {
   StyledBanner,
   StyledImg,
@@ -14,7 +12,7 @@ import {
 import ImgLogo from 'assets/images/priscila-e-celso-logo.svg';
 
 const Banner = () => {
-  const [banner, setBanner] = useState([])
+  const [banner, setBanner] = useState([]);
   const query = `
     {
       bannerCollection {
@@ -36,14 +34,18 @@ const Banner = () => {
 
   useEffect(() => {
     window
-      .fetch(`https://graphql.contentful.com/content/v1/spaces/bz9d56pnav45/`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: 'Bearer OhHLk8PiunfsccpMwzamwzaCPvAA0f0tskhYWoWEoZk',
-        },
-        body: JSON.stringify({ query }),
-      })
+      .fetch(
+        `https://graphql.contentful.com/content/v1/spaces/bz9d56pnav45/`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization:
+              'Bearer OhHLk8PiunfsccpMwzamwzaCPvAA0f0tskhYWoWEoZk'
+          },
+          body: JSON.stringify({ query })
+        }
+      )
       .then((response) => response.json())
       .then(({ data, errors }) => {
         if (errors) {
@@ -52,33 +54,34 @@ const Banner = () => {
 
         setBanner(data.bannerCollection.items);
       });
-    }, 
-  [query]);
+  }, [query]);
 
   if (banner.length === 0 || !banner) {
-    return 'Carregando...'
+    return 'Carregando...';
   }
 
-  return(
+  return (
     <React.Fragment>
       {banner.map((item, index) => {
-        return(
+        return (
           <StyledBanner key={index}>
             <StyledWrapper>
               <StyledImg src={item.photo.url} alt={item.title} />
               <StyledBannerContent>
                 <StyledSubtitle>{item?.subtitle}</StyledSubtitle>
                 <StyledTitle key={index}>
-                  <img src={ImgLogo} alt={item.title}/>
+                  <img src={ImgLogo} alt={item.title} />
                 </StyledTitle>
-                <StyledDate>{format(new Date(item.date), 'dd . MM . yyyy')}</StyledDate>
+                <StyledDate>
+                  {format(new Date(item.date), 'dd . MM . yyyy')}
+                </StyledDate>
               </StyledBannerContent>
             </StyledWrapper>
           </StyledBanner>
-        )
+        );
       })}
     </React.Fragment>
   );
-}
+};
 
 export default Banner;

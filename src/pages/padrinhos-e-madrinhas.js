@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const groomsmenAndBridesmaids = () => {
-  const [people, setPeople] = useState([])
+  const [people, setPeople] = useState([]);
   const query = `
   {
       groomsmenAndBridesmaidsCollection {
@@ -15,14 +15,18 @@ const groomsmenAndBridesmaids = () => {
 
   useEffect(() => {
     window
-      .fetch(`https://graphql.contentful.com/content/v1/spaces/bz9d56pnav45/`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: 'Bearer OhHLk8PiunfsccpMwzamwzaCPvAA0f0tskhYWoWEoZk',
-        },
-        body: JSON.stringify({ query }),
-      })
+      .fetch(
+        `https://graphql.contentful.com/content/v1/spaces/bz9d56pnav45/`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization:
+              'Bearer OhHLk8PiunfsccpMwzamwzaCPvAA0f0tskhYWoWEoZk'
+          },
+          body: JSON.stringify({ query })
+        }
+      )
       .then((response) => response.json())
       .then(({ data, errors }) => {
         if (errors) {
@@ -31,23 +35,19 @@ const groomsmenAndBridesmaids = () => {
 
         setPeople(data.groomsmenAndBridesmaidsCollection.items);
       });
-    }, 
-  [query]);
+  }, [query]);
 
   if (people.length === 0 || !people) {
-    return 'Carregando...'
+    return 'Carregando...';
   }
 
-  return(
+  return (
     <React.Fragment>
       {people.map((person, index) => {
-
-        return(
-          <h3 key={index}>{person.name}</h3>
-        )
+        return <h3 key={index}>{person.name}</h3>;
       })}
     </React.Fragment>
   );
-}
+};
 
 export default groomsmenAndBridesmaids;

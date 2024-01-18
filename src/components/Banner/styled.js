@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { fonts } from "assets/global/tokens";
+import styled from 'styled-components';
+import { fonts } from 'assets/global/tokens';
 import ImgFlower from 'assets/images/flower.svg';
 
 export const StyledBanner = styled.div`
@@ -33,7 +33,7 @@ export const StyledImg = styled.img`
 `;
 
 export const StyledBannerContent = styled.div`
-  position: relative; 
+  position: relative;
   z-index: 10;
   padding-bottom: 100px;
   text-align: center;
@@ -73,7 +73,7 @@ export const StyledSubtitle = styled.h4`
   font-size: 36px;
   color: #fff;
   text-transform: uppercase;
-  
+
   &:after {
     position: absolute;
     bottom: 0;
@@ -115,4 +115,4 @@ export const StyledDate = styled.h4`
   @media screen and (max-width: 768px) {
     font-size: 24px;
   }
-`
+`;
