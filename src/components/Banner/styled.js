@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { fonts } from "assets/global/tokens";
 import ImgFlower from 'assets/images/flower.svg';
 
 export const StyledBanner = styled.div`
@@ -48,7 +49,7 @@ export const StyledBannerContent = styled.div`
 
 export const StyledTitle = styled.h3`
   margin: 16px 0;
-  font-family: 'Beloved Script', serif;
+  font-family: ${fonts.secondary};
   font-size: 100px;
   font-weight: 700;
   color: #fff;

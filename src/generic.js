@@ -20,7 +20,7 @@ export const StyledScheduleHeader = styled.header`
   max-width: 800px;
   margin: 0 auto 150px auto;
   font-size: 20px;  
-  font-family: 'Montserrat', sans-serif;
+  font-family: ${fonts.montserrat}
   font-weight: 300;
   color: #9F9F63;
 
@@ -45,7 +45,7 @@ export const StyledScheduleTitle = styled.h2`
   z-index: 1;
   margin: 0;
   font-size: 80px;
-  font-family: 'Beloved Script', serif;
+  font-family: ${fonts.secondary};
   background-color: #072441;
 
   &:before,
@@ -96,7 +96,7 @@ export const StyledScheduleContent = styled.div`
 
 export const StyledScheduleItem = styled.div`
   width: 48.5%;
-  font-family: 'Montserrat', sans-serif;
+  font-family: ${fonts.montserrat}
   color: #ffffff;
   text-align: center;
 
@@ -143,7 +143,7 @@ export const StyledScheduleItem = styled.div`
 `;
 
 export const StyledScheduleItemTitle = styled.h4`
-  font-family: 'Beloved Script', serif;
+  font-family: ${fonts.secondary};
   font-size: 34px;
   font-weight: 700;
   color: #9F9F63;
@@ -174,7 +174,7 @@ export const StyledTimerTitle = styled.h2`
   z-index: 1;
   margin: 0;
   font-size: 80px;
-  font-family: 'Beloved Script', serif;
+  font-family: ${fonts.secondary};
 
   &:before,
   &:after {
@@ -238,13 +238,13 @@ export const StyledTimerClock = styled.div`
 
   h4 {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: ${fonts.montserrat}
     font-size: 100px;
     font-weight: 700;
   }
 
   p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: ${fonts.montserrat}
     font-size: 34px;
     font-weight: 300;
   }
@@ -277,7 +277,7 @@ export const StyledTimerClock = styled.div`
 
 export const StyledTimerFooter = styled.footer`
   margin: 150px auto 0 auto;  
-  font-family: 'Montserrat', sans-serif;
+  font-family: ${fonts.montserrat}
   font-weight: 300;
 
   blockquote {

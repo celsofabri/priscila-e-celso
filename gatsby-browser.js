@@ -11,3 +11,4 @@ import 'normalize.css';
 
 // Typography
 import 'typeface-montserrat';
+import 'typeface-cormorant-garamond';

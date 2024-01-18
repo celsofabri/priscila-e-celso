@@ -10153,6 +10153,11 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==
 
+typeface-cormorant-garamond@^1.1.13:
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/typeface-cormorant-garamond/-/typeface-cormorant-garamond-1.1.13.tgz#47e18fe1362c21b9b1381453d7c53c85a3cac9b1"
+  integrity sha512-LgDoQk6uZAPzNaxCgjCO/bigbwjQymqSesqORthVvXSuy4yICLZ30IitQHYIQpOvQ4PC6B8BfNx5NSPezmLc8A==
+
 typeface-montserrat@^1.1.13:
   version "1.1.13"
   resolved "https://registry.yarnpkg.com/typeface-montserrat/-/typeface-montserrat-1.1.13.tgz#2a16729c174dd1a8c3fec05a851b7725412606cc"
