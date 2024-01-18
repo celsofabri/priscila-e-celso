@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import bgHands from './images/bg-hands.png';
+import bgHands from './images/bg-hands.svg';
 
 export const StyledWrapper = styled.div`
   display: block;
@@ -22,6 +22,10 @@ export const StyledScheduleHeader = styled.header`
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   color: #9F9F63;
+
+  @media screen and (max-width: 960px) {
+    font-size: 16px;
+  }
 `;
 
 export const StyledScheduleSubtitle = styled.h3`
@@ -29,6 +33,10 @@ export const StyledScheduleSubtitle = styled.h3`
   font-size: 28px;
   font-weight: 300;
   text-transform: uppercase;
+
+  @media screen and (max-width: 960px) {
+    font-size: 18px;
+  }
 `;
 
 export const StyledScheduleTitle = styled.h2`
@@ -57,6 +65,10 @@ export const StyledScheduleTitle = styled.h2`
   &:after {
     right: 0;
   }
+
+  @media screen and (max-width: 960px) {
+    font-size: 60px;
+  }
 `;
 
 export const StyledScheduleContent = styled.div`
@@ -72,11 +84,45 @@ export const StyledScheduleItem = styled.div`
   color: #ffffff;
   text-align: center;
 
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
   p {
     max-width: 430px;
     margin: 0 auto;
     font-size: 18px;
     font-weight: 300;
+  }
+
+  @media screen and (max-width: 960px) {
+    
+    p {
+      font-size: 14px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    
+    img {
+      width: 50%;
+    }
+  }
+
+  @media screen and (max-width: 490px) {
+    width: 100%;
+    margin-top: 64px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    img {
+      width: 30%;
+    }
   }
 `;
 
@@ -85,6 +131,10 @@ export const StyledScheduleItemTitle = styled.h4`
   font-size: 34px;
   font-weight: 700;
   color: #9F9F63;
+
+  @media screen and (max-width: 960px) {
+    font-size: 28px;
+  }
 `
 
 export const StyledTimer = styled.section`
@@ -93,8 +143,8 @@ export const StyledTimer = styled.section`
   background-color: #F7E7E0;
   background-image: url(${bgHands});
   background-repeat: no-repeat;
-  background-size: inherit;
-  background-position: top center;
+  background-size: cover;
+  background-position: center center;
 `;
 
 export const StyledTimerHeader = styled.header`
@@ -109,7 +159,6 @@ export const StyledTimerTitle = styled.h2`
   margin: 0;
   font-size: 80px;
   font-family: 'Beloved Script', serif;
-  background-color: #F7E7E0;
 
   &:before,
   &:after {
@@ -128,6 +177,10 @@ export const StyledTimerTitle = styled.h2`
 
   &:after {
     right: 0;
+  }
+
+  @media screen and (max-width: 960px) {
+    font-size: 60px;
   }
 `;
 
@@ -159,11 +212,35 @@ export const StyledTimerClock = styled.div`
     font-size: 34px;
     font-weight: 300;
   }
+
+  @media screen and (max-width: 960px) {
+    width: 45%;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 35%;
+
+    h4 {
+      font-size: 60px;
+    }
+
+    p {
+      font-size: 22px;
+    }
+  }
+
+  @media screen and (max-width: 460px) {
+    width: 100%;
+    margin-top: 32px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 `;
 
 export const StyledTimerFooter = styled.footer`
-  margin: 150px auto 0 auto;
-  font-size: 20px;  
+  margin: 150px auto 0 auto;  
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
 
@@ -171,9 +248,17 @@ export const StyledTimerFooter = styled.footer`
     max-width: 768px;
     margin: 0 auto;
     padding: 16px;
+    font-size: 20px;
     font-weight: 700;
     font-style: italic;
     background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 4px;
+    border-radius: 30px;
+  }
+
+  @media screen and (max-width: 960px) {
+    
+    blockquote {
+      font-size: 16px;
+    }
   }
 `;

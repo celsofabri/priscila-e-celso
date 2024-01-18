@@ -101,7 +101,7 @@ const Home = () => {
             </StyledTimerClock>
           </StyledTimerContent>
           <StyledTimerFooter>
-            <blockquote>"todos os lugares que estive durante minha vida, me levaram até você…"</blockquote>
+            <blockquote>" — todos os lugares que estive durante minha vida, me levaram até você…"</blockquote>
           </StyledTimerFooter>
         </StyledWrapper>
       </StyledTimer>

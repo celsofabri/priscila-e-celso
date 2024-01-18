@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { format } from 'date-fns';
 import {
+  StyledWrapper
+} from '../../generic';
+import {
   StyledBanner,
   StyledImg,
   StyledBannerContent,
@@ -9,7 +12,6 @@ import {
   StyledDate
 } from './styled';
 import ImgLogo from '../../images/priscila-e-celso-logo.svg';
-import ImgFlower from '../../images/flower.svg';
 
 const Banner = () => {
   const [banner, setBanner] = useState([])
@@ -62,15 +64,16 @@ const Banner = () => {
       {banner.map((item, index) => {
         return(
           <StyledBanner key={index}>
-            <StyledImg src={item.photo.url} alt={item.title} />
-            <StyledBannerContent>
-              <StyledSubtitle>{item?.subtitle}</StyledSubtitle>
-              <StyledTitle key={index}>
-                <img src={ImgLogo} alt={item.title}/>
-              </StyledTitle>
-              <StyledDate>{format(new Date(item.date), 'dd . MM . yyyy')}</StyledDate>
-              <img src={ImgFlower} alt="Flores"/>
+            <StyledWrapper>
+              <StyledImg src={item.photo.url} alt={item.title} />
+              <StyledBannerContent>
+                <StyledSubtitle>{item?.subtitle}</StyledSubtitle>
+                <StyledTitle key={index}>
+                  <img src={ImgLogo} alt={item.title}/>
+                </StyledTitle>
+                <StyledDate>{format(new Date(item.date), 'dd . MM . yyyy')}</StyledDate>
               </StyledBannerContent>
+            </StyledWrapper>
           </StyledBanner>
         )
       })}

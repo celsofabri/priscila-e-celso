@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import ImgFlower from '../../images/flower.svg';
 
 export const StyledBanner = styled.div`
   position: relative;
@@ -33,7 +34,12 @@ export const StyledImg = styled.img`
 export const StyledBannerContent = styled.div`
   position: relative; 
   z-index: 10;
+  padding-bottom: 100px;
   text-align: center;
+  background-image: url(${ImgFlower});
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: contain;
 
   img {
     margin-top: 32px;
@@ -46,6 +52,15 @@ export const StyledTitle = styled.h3`
   font-size: 100px;
   font-weight: 700;
   color: #fff;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 80px;
+  }
 `;
 
 export const StyledSubtitle = styled.h4`
@@ -67,6 +82,10 @@ export const StyledSubtitle = styled.h4`
     margin-left: -75px;
     background-color: #fff;
     content: '';
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 24px;
   }
 `;
 
@@ -90,5 +109,9 @@ export const StyledDate = styled.h4`
     margin-left: -75px;
     background-color: #fff;
     content: '';
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 24px;
   }
 `
