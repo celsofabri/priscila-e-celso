@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Banner from '../components/Banner';
+import Banner from 'components/Banner';
 import { format, differenceInMilliseconds } from 'date-fns';
 import {
   StyledWrapper,
@@ -16,9 +16,9 @@ import {
   StyledTimerContent,
   StyledTimerClock,
   StyledTimerFooter
-} from '../generic.js'
-import ImgRings from '../images/rings.svg';
-import ImgCheers from '../images/cheers.svg';
+} from 'generic.js'
+import ImgRings from 'assets/images/rings.svg';
+import ImgCheers from 'assets/images/cheers.svg';
 
 
 const Home = () => {
@@ -101,7 +101,7 @@ const Home = () => {
             </StyledTimerClock>
           </StyledTimerContent>
           <StyledTimerFooter>
-            <blockquote>" — todos os lugares que estive durante minha vida, me levaram até você…"</blockquote>
+            <blockquote>" — Todos os lugares que estive durante minha vida, me levaram até você…"</blockquote>
           </StyledTimerFooter>
         </StyledWrapper>
       </StyledTimer>

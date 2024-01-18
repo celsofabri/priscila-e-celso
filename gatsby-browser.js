@@ -8,3 +8,6 @@ import './src/assets/global/style.css';
 
 // Reset
 import 'normalize.css';
+
+// Typography
+import 'typeface-montserrat';

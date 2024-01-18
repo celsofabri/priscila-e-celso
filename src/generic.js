@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import bgHands from './images/bg-hands.svg';
+import bgHands from 'assets/images/bg-hands.svg';
+import { fonts } from 'assets/global/tokens';
 
 export const StyledWrapper = styled.div`
   display: block;

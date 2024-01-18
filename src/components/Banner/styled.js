@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ImgFlower from '../../images/flower.svg';
+import ImgFlower from 'assets/images/flower.svg';
 
 export const StyledBanner = styled.div`
   position: relative;

@@ -25,6 +25,7 @@
     "gatsby-plugin-google-gtag": "^5.11.0",
     "gatsby-plugin-image": "^3.11.0",
     "gatsby-plugin-manifest": "^5.11.0",
+    "gatsby-plugin-resolve-src": "^2.1.0",
     "gatsby-plugin-sharp": "^5.11.0",
     "gatsby-plugin-sitemap": "^6.11.0",
     "gatsby-plugin-styled-components": "^6.11.0",
@@ -34,7 +35,8 @@
     "normalize.css": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "styled-components": "^6.0.5"
+    "styled-components": "^6.0.5",
+    "typeface-montserrat": "^1.1.13"
   },
   "devDependencies": {
     "eslint-config-prettier": "^8.8.0",

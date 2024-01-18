@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { format } from 'date-fns';
 import {
   StyledWrapper
-} from '../../generic';
+} from 'generic';
 import {
   StyledBanner,
   StyledImg,
@@ -11,7 +11,7 @@ import {
   StyledSubtitle,
   StyledDate
 } from './styled';
-import ImgLogo from '../../images/priscila-e-celso-logo.svg';
+import ImgLogo from 'assets/images/priscila-e-celso-logo.svg';
 
 const Banner = () => {
   const [banner, setBanner] = useState([])
