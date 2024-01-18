@@ -1,4 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import { format } from 'date-fns';
+import {
+  StyledBanner,
+  StyledImg,
+  StyledBannerContent,
+  StyledTitle,
+  StyledSubtitle,
+  StyledDate
+} from './styled';
+import ImgLogo from '../../images/priscila-e-celso-logo.svg';
+import ImgFlower from '../../images/flower.svg';
 
 const Banner = () => {
   const [banner, setBanner] = useState([])
@@ -8,6 +19,7 @@ const Banner = () => {
         items {
           title
           subtitle,
+          date,
           photo {
             url
             width
@@ -19,9 +31,6 @@ const Banner = () => {
       }
     }
   `;
-
-  console.log('debug', query)
-  console.log('banner', banner)
 
   useEffect(() => {
     window
@@ -52,11 +61,17 @@ const Banner = () => {
     <React.Fragment>
       {banner.map((item, index) => {
         return(
-          <div key={index}>
-            <img src={item.photo.url} alt={item?.title || 'Priscila & Celso'} />
-            <h3 key={index}>{item?.title || 'Priscila & Celso'}</h3>
-            <h4>{item?.subtitle || 'Eu pertenço a você, você pertence a mim...'}</h4>
-          </div>
+          <StyledBanner key={index}>
+            <StyledImg src={item.photo.url} alt={item.title} />
+            <StyledBannerContent>
+              <StyledSubtitle>{item?.subtitle}</StyledSubtitle>
+              <StyledTitle key={index}>
+                <img src={ImgLogo} alt={item.title}/>
+              </StyledTitle>
+              <StyledDate>{format(new Date(item.date), 'dd . MM . yyyy')}</StyledDate>
+              <img src={ImgFlower} alt="Flores"/>
+              </StyledBannerContent>
+          </StyledBanner>
         )
       })}
     </React.Fragment>
