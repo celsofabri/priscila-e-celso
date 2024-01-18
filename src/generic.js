@@ -23,7 +23,7 @@ export const StyledScheduleHeader = styled.header`
   font-size: 20px;
   font-family: ${fonts.primary};
   font-weight: 300;
-  color: #9f9f63;
+  color: #dd9788;
 
   @media screen and (max-width: 960px) {
     font-size: 16px;
@@ -56,7 +56,7 @@ export const StyledScheduleTitle = styled.h2`
     top: 55%;
     width: 50px;
     height: 1px;
-    background-color: #9f9f63;
+    background-color: #dd9788;
     content: '';
   }
 
@@ -149,7 +149,7 @@ export const StyledScheduleItemTitle = styled.h4`
   font-family: ${fonts.secondary};
   font-size: 34px;
   font-weight: 700;
-  color: #9f9f63;
+  color: #dd9788;
 
   @media screen and (max-width: 960px) {
     font-size: 28px;
@@ -446,6 +446,10 @@ export const StyledAddressInfo = styled.section`
       font-size: 14px;
     }
   }
+`;
+
+export const StyledRSVP = styled.section`
+  padding: 100px 0;
 `;
 
 export const StyledFooter = styled.footer`

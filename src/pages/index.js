@@ -21,6 +21,7 @@ import {
   StyledAddressTitle,
   StyledAddressContent,
   StyledAddressInfo,
+  StyledRSVP,
   StyledFooter,
   StyledFooterContainer,
   StyledFooterLogo,
@@ -168,6 +169,10 @@ const Home = () => {
           </StyledAddressContent>
         </StyledWrapper>
       </StyledAddress>
+
+      {/* <StyledRSVP>
+        <div data-tf-live="01HMEWJ5NCNGSC8RRZ48NDMTH1"></div><script src="//embed.typeform.com/next/embed.js"></script>
+      </StyledRSVP> */}
 
       <StyledFooter>
         <StyledWrapper>
