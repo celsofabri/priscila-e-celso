@@ -501,7 +501,7 @@ export const StyledFooterMenu = styled.div`
 
 export const StyledFooterCategory = styled.h3`
   margin-top: 0;
-
+  color: #dd9788;
 `;
 
 export const StyledFooterList = styled.ul`
