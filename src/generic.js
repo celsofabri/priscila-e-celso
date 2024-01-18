@@ -529,7 +529,7 @@ export const StyledFooterAnchor = styled.a`
   &:before {
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: -15px;
     width: 0;
     height: 100%;
     background-color: #dd9788;
@@ -538,7 +538,6 @@ export const StyledFooterAnchor = styled.a`
   }
 
   &:hover {
-    padding-left: 15px;
 
     &:before {
       width: 5px;
