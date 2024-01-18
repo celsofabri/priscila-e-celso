@@ -5,7 +5,8 @@ module.exports = {
   siteMetadata: {
     title: `Casamento Priscila & Celso`,
     description: `Casamento Priscila & Celso | Todos os lugares que estive durante minha vida, me levaram até você…`,
-    author: `Celso Fabri Junior`
+    author: `Celso Fabri Junior`,
+    siteUrl: `https://priscilaecelso.com`
   },
   plugins: [
     {
