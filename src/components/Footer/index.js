@@ -27,7 +27,6 @@ const Footer = () => {
                 <StyledFooterAnchor
                   href="/nossa-historia"
                   title="Nossa História"
-                  target="_blank"
                   rel="noopener noreferrer"
                 >
                   Nossa História
@@ -37,7 +36,6 @@ const Footer = () => {
                 <StyledFooterAnchor
                   href="/padrinhos-e-madrinhas"
                   title="Padrinhos & Madrinhas"
-                  target="_blank"
                   rel="noopener noreferrer"
                 >
                   Padrinhos & Madrinhas
