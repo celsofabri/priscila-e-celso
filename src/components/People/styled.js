@@ -83,6 +83,11 @@ export const StyledPeopleName = styled.h4`
 export const StyledPeopleDetails = styled.div`
   display: block;
   color: ${colors.white};
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 `;
 
 export const StyledPeopleBox = styled.div`
