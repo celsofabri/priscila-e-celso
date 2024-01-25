@@ -28,4 +28,11 @@ export const StyledStorySubtitle = styled.h3`
   color: ${colors.red500}
 `;
 
-export const StyledStoryContent = styled.main``;
+export const StyledStoryContent = styled.main`
+  display: block;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+`;

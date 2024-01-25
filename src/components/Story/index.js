@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Markdown from 'react-markdown'
 import { StyledWrapper } from 'assets/global/styled';
 import {
   StyledStory,
@@ -55,7 +56,9 @@ const Story = () => {
         </StyledWrapper>
       </StyledStoryHeader>
       <StyledStoryContent>
-        <StyledWrapper>{ourStory[0]?.content}</StyledWrapper>
+        <StyledWrapper>
+          <Markdown>{ourStory[0]?.content}</Markdown>
+        </StyledWrapper>
       </StyledStoryContent>
     </StyledStory>
   );
