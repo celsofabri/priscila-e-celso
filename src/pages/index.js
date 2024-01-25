@@ -3,6 +3,7 @@ import Header from 'components/Header';
 import Banner from 'components/Banner';
 import Schedule from 'components/Schedule';
 import Timer from 'components/Timer';
+import RSVP from 'components/RSVP';
 import Address from 'components/Address';
 import Footer from 'components/Footer';
 
@@ -14,6 +15,7 @@ const Home = () => {
       <Banner />
       <Schedule/>
       <Timer/>
+      <RSVP/>
       <Address/>
       <Footer/>
     </React.Fragment>
