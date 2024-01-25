@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Header from 'components/Header';
+import HeaderSimple from 'components/HeaderSimple';
 import Banner from 'components/Banner';
 import Schedule from 'components/Schedule';
 import Timer from 'components/Timer';
@@ -11,7 +11,7 @@ const Home = () => {
 
   return (
     <React.Fragment>
-      <Header />
+      <HeaderSimple />
       <Banner />
       <Schedule/>
       <Timer/>

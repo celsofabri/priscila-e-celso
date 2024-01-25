@@ -18,10 +18,10 @@ const Menu = ({ isMenuOpen }) => {
             <StyledMenuAnchor href="/">Home</StyledMenuAnchor>
           </StyledMenuItem>
           <StyledMenuItem>
-            <StyledMenuAnchor href="/padrinhos-e-madrinhas">Padrinhos & Madrinhas</StyledMenuAnchor>
+            <StyledMenuAnchor href="/nossa-historia">Nossa História</StyledMenuAnchor>
           </StyledMenuItem>
           <StyledMenuItem>
-            <StyledMenuAnchor href="#">Menu 3</StyledMenuAnchor>
+            <StyledMenuAnchor href="/padrinhos-e-madrinhas">Padrinhos & Madrinhas</StyledMenuAnchor>
           </StyledMenuItem>
         </StyledMenuList>
       </StyledWrapper>

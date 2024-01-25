@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Header from 'components/Header';
+import Footer from 'components/Footer';
 
 const groomsmenAndBridesmaids = () => {
   const [people, setPeople] = useState([]);
@@ -44,10 +45,11 @@ const groomsmenAndBridesmaids = () => {
 
   return (
     <React.Fragment>
-      <Header />
+      <Header/>
       {people.map((person, index) => {
         return <h3 key={index}>{person.name}</h3>;
       })}
+      <Footer/>
     </React.Fragment>
   );
 };
