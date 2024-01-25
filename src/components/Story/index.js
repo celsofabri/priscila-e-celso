@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Markdown from 'react-markdown'
+import Markdown from 'react-markdown';
 import { StyledWrapper } from 'assets/global/styled';
 import {
   StyledStory,
@@ -9,16 +9,14 @@ import {
   StyledStoryContent
 } from './styled';
 
-const Story = () => {
+const Story = ({ data }) => {
   const [ourStory, setOurStory] = useState([])
   const query = `
     {
-      pagesCollection {
-        items {
-          title
-          subtitle
-          content
-        }
+      pages(id: "3hGTYzE6je3ZUXL0tujc7I") {
+        title
+        subtitle
+        content
       }
     }
   `;
@@ -43,7 +41,7 @@ const Story = () => {
           console.error(errors);
         }
 
-        setOurStory(data.pagesCollection.items);
+        setOurStory(data.pages);
       });
   }, [query]);
 
@@ -51,13 +49,13 @@ const Story = () => {
     <StyledStory>
       <StyledStoryHeader>
         <StyledWrapper>
-          <StyledStoryTitle>{ourStory[0]?.title}</StyledStoryTitle>
-          <StyledStorySubtitle>{ourStory[0]?.subtitle}</StyledStorySubtitle>
+          <StyledStoryTitle>{ourStory?.title}</StyledStoryTitle>
+          <StyledStorySubtitle>{ourStory?.subtitle}</StyledStorySubtitle>
         </StyledWrapper>
       </StyledStoryHeader>
       <StyledStoryContent>
         <StyledWrapper>
-          <Markdown>{ourStory[0]?.content}</Markdown>
+          <Markdown>{ourStory?.content}</Markdown>
         </StyledWrapper>
       </StyledStoryContent>
     </StyledStory>

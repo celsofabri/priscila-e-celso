@@ -42,7 +42,8 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-resolve-src',
     'gatsby-plugin-styled-components',
-    'gatsby-plugin-sitemap'
+    'gatsby-plugin-sitemap',
+    'gatsby-transformer-remark'
   ],
   pathPrefix: '/'
 };

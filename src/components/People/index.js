@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Markdown from 'react-markdown'
 import { StyledWrapper } from 'assets/global/styled';
 import {
   StyledPeople,
@@ -76,7 +75,7 @@ const People = () => {
                 <StyledPeopleInfo>
                   <StyledPeopleName>{person.name}</StyledPeopleName>
                   <StyledPeopleDetails>
-                    <Markdown>{person.description}</Markdown>
+                    {person.description}
                   </StyledPeopleDetails>
                 </StyledPeopleInfo>
               </StyledPeopleBox>
