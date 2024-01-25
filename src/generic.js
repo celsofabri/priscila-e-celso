@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import bgHands from 'assets/images/bg-hands.svg';
-import bgVilla from 'assets/images/bg-villa-do-rocio.jpg';
 import { fonts } from 'assets/global/tokens';
 
 export const StyledWrapper = styled.div`
@@ -314,22 +313,7 @@ export const StyledTimerFooter = styled.footer`
 
 export const StyledAddress = styled.section`
   position: relative;
-  padding: 100px 0;
   margin: 0;
-  background-image: url(${bgVilla});
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  
-  &:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.5);
-    content: '';
-  }
 `;
 
 export const StyledAddressHeader = styled.section`
@@ -365,11 +349,7 @@ export const StyledAddressTitle = styled.section`
     right: 0;
   }
 
-  @media screen and (max-width: 960px) {
-    font-size: 60px;
-  }
-
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1440px) {
     &:before,
     &:after {
       width: 50px;
@@ -389,24 +369,88 @@ export const StyledAddressTitle = styled.section`
     }
   }
 
+  @media screen and (max-width: 1080px) {
+    text-align: left;
+
+    &:before {
+      left: 0;
+      margin-left: 0;
+    }
+
+    &:after {
+      right: auto;
+      left: 0;
+      margin-right: 0;
+    }
+  }
+
+  @media screen and (max-width: 960px) {
+    font-size: 60px;
+  }
+
+  @media screen and (max-width: 768px) {
+    text-align: center;
+
+    &:before {
+      top: 0;
+      left: 50%;
+      margin-left: -25px;
+    }
+
+    &:after {
+      top: auto;
+      bottom: 0;
+      right: 50%;
+      left: auto;
+      margin-right: -25px;
+    }
+  }
+
   @media screen and (max-width: 520px) {
     font-size: 48px;
   }
 `;
 
 export const StyledAddressContent = styled.section`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
-  padding: 100px 0;
+  height: 75vh;
 
-  @media screen and (max-width: 620px) {
-    padding: 50px 0;
+  @media screen and (max-width: 768px) {
+    height: auto;
   }
 `;
 
-export const StyledAddressInfo = styled.section`
+export const StyledAddressPlace = styled.div`
+  width: 50%;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: 300px;
+  }
+
+  @media screen and (max-width: 520px) {
+    width: 100%;
+    height: 200px;
+  }
+`;
+
+export const StyledAddressInfo = styled.div`
   position: relative;
   z-index: 1;
   width: 50%;
+  padding: 64px;
+  background-color: #dd9788;
 
   h3 {
     font-family: ${fonts.secondary};
@@ -426,21 +470,30 @@ export const StyledAddressInfo = styled.section`
     display: inline-block;
     padding: 16px;
     font-size: 12px;
-    color: #fff;
+    color: #dd9788;
     text-decoration: none;
     text-transform: uppercase;
-    background-color: #dd9788;
+    background-color: #fff;
     border-radius: 10px;
     transition: all .2s ease-in-out;
 
     &:hover {
-      color: #dd9788;
-      background-color: #fff;
+      color: #fff;
+      background-color: #dd9788;
     }
   }
 
+  @media screen and (max-width: 1080px) {
+    h3 {
+      font-size: 32px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+
   @media screen and (max-width: 620px) {
-    width: 75%;
 
     h3 {
       font-size: 36px;
@@ -450,6 +503,10 @@ export const StyledAddressInfo = styled.section`
     address {
       font-size: 14px;
     }
+  }
+
+  @media screen and (max-width: 520px) {
+    text-align: center;
   }
 `;
 

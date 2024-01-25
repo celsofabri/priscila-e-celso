@@ -20,8 +20,8 @@ import {
   StyledAddressHeader,
   StyledAddressTitle,
   StyledAddressContent,
+  StyledAddressPlace,
   StyledAddressInfo,
-  StyledRSVP,
   StyledFooter,
   StyledFooterContainer,
   StyledFooterLogo,
@@ -34,6 +34,7 @@ import {
 import ImgLogo from 'assets/images/priscila-e-celso-logo.svg';
 import ImgRings from 'assets/images/rings.svg';
 import ImgCheers from 'assets/images/cheers.svg';
+import ImgVilla from 'assets/images/bg-villa-do-rocio.jpg';
 
 const Home = () => {
   const targetDate = new Date('2024-12-14T00:00:00');
@@ -147,32 +148,27 @@ const Home = () => {
       </StyledTimer>
 
       <StyledAddress>
-        <StyledWrapper>
-          <StyledAddressHeader>
+        <StyledAddressContent>
+          <StyledAddressPlace>
+            <img src={ImgVilla} alt="Villa do Rocio" />
+          </StyledAddressPlace>
+          <StyledAddressInfo>
             <StyledAddressTitle>Localização</StyledAddressTitle>
-          </StyledAddressHeader>
-          <StyledAddressContent>
-            <StyledAddressInfo>
-              <h3>Villa do Rocio</h3>
-              <address>
-                R. José Kuckla, 100 - Juruqui<br/>
-                Almirante Tamandaré - PR, 83507-990
-              </address>
-              <a 
-                href="https://maps.app.goo.gl/oPGbms49BXQhRNT6A"
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                Veja como chegar
-              </a>
-            </StyledAddressInfo>
-          </StyledAddressContent>
-        </StyledWrapper>
+            <h3>Villa do Rocio</h3>
+            <address>
+              R. José Kuckla, 100 - Juruqui<br/>
+              Almirante Tamandaré - PR, 83507-990
+            </address>
+            <a 
+              href="https://maps.app.goo.gl/oPGbms49BXQhRNT6A"
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              Veja como chegar
+            </a>
+          </StyledAddressInfo>
+        </StyledAddressContent>
       </StyledAddress>
-
-      {/* <StyledRSVP>
-        <div data-tf-live="01HMEWJ5NCNGSC8RRZ48NDMTH1"></div><script src="//embed.typeform.com/next/embed.js"></script>
-      </StyledRSVP> */}
 
       <StyledFooter>
         <StyledWrapper>
@@ -195,7 +191,7 @@ const Home = () => {
                 </StyledFooterItem>
                 <StyledFooterItem>
                   <StyledFooterAnchor 
-                    href="#"
+                    href="https://www.casamentos.com.br/web/priscila-e-celso"
                     title="Confirme sua presença"
                     target="_blank" 
                     rel="noopener noreferrer"
