@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from 'components/Header';
+import Story from 'components/Story';
 import Footer from 'components/Footer';
 
 const OurStory = () => {
@@ -7,7 +8,7 @@ const OurStory = () => {
   return (
     <React.Fragment>
       <Header/>
-      <h2>Nossa História</h2>
+      <Story/>
       <Footer/>
     </React.Fragment>
   );
