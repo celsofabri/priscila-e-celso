@@ -201,7 +201,7 @@ const Home = () => {
                 </StyledFooterItem>
                 <StyledFooterItem>
                   <StyledFooterAnchor 
-                    href="#"
+                    href="https://maps.app.goo.gl/oPGbms49BXQhRNT6A"
                     title="Como chegar no evento?"
                     target="_blank" 
                     rel="noopener noreferrer"
