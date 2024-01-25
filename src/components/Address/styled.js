@@ -165,7 +165,7 @@ export const StyledAddressInfo = styled.div`
     text-transform: uppercase;
     background-color: ${colors.white};
     border-radius: 10px;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 
     &:hover {
       color: ${colors.white};
@@ -184,7 +184,6 @@ export const StyledAddressInfo = styled.div`
   }
 
   @media screen and (max-width: 620px) {
-
     h3 {
       font-size: 36px;
       line-height: 1;

@@ -7,11 +7,11 @@ const OurStory = () => {
 
   return (
     <React.Fragment>
-      <Header/>
-      <Story/>
-      <Footer/>
+      <Header />
+      <Story />
+      <Footer />
     </React.Fragment>
   );
-}
+};
 
 export default OurStory;

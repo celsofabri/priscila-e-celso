@@ -68,9 +68,9 @@ export const StyledRSVPTitle = styled.h2`
 
 export const StyledRSVPContent = styled.div`
   text-align: center;
-  
+
   p {
-    color: ${colors.white}
+    color: ${colors.white};
   }
 
   a {
@@ -83,7 +83,7 @@ export const StyledRSVPContent = styled.div`
     text-transform: uppercase;
     background-color: ${colors.red500};
     border-radius: 10px;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 
     &:hover {
       color: ${colors.red500};

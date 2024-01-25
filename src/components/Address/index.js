@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledWrapper } from 'generic';
+import { StyledWrapper } from 'assets/global/styled';
 import {
   StyledAddress,
   StyledAddressHeader,
@@ -11,7 +11,6 @@ import {
 import ImgVilla from 'assets/images/bg-villa-do-rocio.jpg';
 
 const Address = () => {
-
   return (
     <StyledAddress>
       <StyledAddressContent>
@@ -22,12 +21,13 @@ const Address = () => {
           <StyledAddressTitle>Localização</StyledAddressTitle>
           <h3>Villa do Rocio</h3>
           <address>
-            R. José Kuckla, 100 - Juruqui<br/>
+            R. José Kuckla, 100 - Juruqui
+            <br />
             Almirante Tamandaré - PR, 83507-990
           </address>
-          <a 
+          <a
             href="https://maps.app.goo.gl/oPGbms49BXQhRNT6A"
-            target="_blank" 
+            target="_blank"
             rel="noopener noreferrer"
           >
             Veja como chegar
@@ -36,6 +36,6 @@ const Address = () => {
       </StyledAddressContent>
     </StyledAddress>
   );
-}
+};
 
 export default Address;

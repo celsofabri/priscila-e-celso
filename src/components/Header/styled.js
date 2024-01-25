@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { StyledWrapper } from 'generic';
+import { StyledWrapper } from 'assets/global/styled';
 import { colors } from 'assets/global/tokens';
 
 export const StyledHeader = styled.div`

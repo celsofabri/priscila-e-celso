@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledWrapper } from 'generic';
+import { StyledWrapper } from 'assets/global/styled';
 import {
   StyledSchedule,
   StyledScheduleHeader,
@@ -13,7 +13,6 @@ import ImgRings from 'assets/images/rings.svg';
 import ImgCheers from 'assets/images/cheers.svg';
 
 const Schedule = () => {
-
   return (
     <StyledSchedule>
       <StyledWrapper>
@@ -26,8 +25,8 @@ const Schedule = () => {
           </StyledScheduleTitle>
           <p>
             Você está convidado para nossa cerimônia de casamento e
-            celebrar com a gente! Aqui está uma prévia do que está
-            por vir.
+            celebrar com a gente! Aqui está uma prévia do que está por
+            vir.
           </p>
         </StyledScheduleHeader>
         <StyledScheduleContent>
@@ -37,8 +36,8 @@ const Schedule = () => {
               Sábado, 7 de Dezembro
             </StyledScheduleItemTitle>
             <p>
-              O dia de nossa união! Recém-casados no cartório com
-              pais e familiares.
+              O dia de nossa união! Recém-casados no cartório com pais
+              e familiares.
             </p>
           </StyledScheduleItem>
           <StyledScheduleItem>
@@ -47,14 +46,14 @@ const Schedule = () => {
               Sábado, 14 de Dezembro
             </StyledScheduleItemTitle>
             <p>
-              O nosso grande dia! Não há forma melhor do que
-              celebrar o nosso amor com amigos e família!
+              O nosso grande dia! Não há forma melhor do que celebrar
+              o nosso amor com amigos e família!
             </p>
           </StyledScheduleItem>
         </StyledScheduleContent>
       </StyledWrapper>
     </StyledSchedule>
   );
-}
+};
 
 export default Schedule;

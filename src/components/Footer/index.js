@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledWrapper } from 'generic';
+import { StyledWrapper } from 'assets/global/styled';
 import {
   StyledFooter,
   StyledFooterContainer,
@@ -13,87 +13,88 @@ import {
 import ImgLogo from 'assets/images/priscila-e-celso-logo.svg';
 
 const Footer = () => {
-
   return (
     <StyledFooter>
       <StyledWrapper>
         <StyledFooterContainer>
-        <StyledFooterLogo>
-          <img src={ImgLogo} alt="Priscila & Celso" />
-        </StyledFooterLogo>
-        <StyledFooterMenu>
+          <StyledFooterLogo>
+            <img src={ImgLogo} alt="Priscila & Celso" />
+          </StyledFooterLogo>
+          <StyledFooterMenu>
             <StyledFooterCategory>Casamento</StyledFooterCategory>
             <StyledFooterList>
-            <StyledFooterItem>
-                <StyledFooterAnchor 
-                    href="/nossa-historia"
-                    title="Nossa História"
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                      Nossa História
-                  </StyledFooterAnchor>
-              </StyledFooterItem>
               <StyledFooterItem>
-                <StyledFooterAnchor 
-                    href="/padrinhos-e-madrinhas"
-                    title="Padrinhos & Madrinhas"
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                      Padrinhos & Madrinhas
-                  </StyledFooterAnchor>
-              </StyledFooterItem>
-              <StyledFooterItem>
-                <StyledFooterAnchor 
-                  href="https://www.casamentos.com.br/web/priscila-e-celso"
-                  title="Confirme sua presença"
-                  target="_blank" 
+                <StyledFooterAnchor
+                  href="/nossa-historia"
+                  title="Nossa História"
+                  target="_blank"
                   rel="noopener noreferrer"
                 >
-                    Confirme sua presença
+                  Nossa História
                 </StyledFooterAnchor>
               </StyledFooterItem>
               <StyledFooterItem>
-                <StyledFooterAnchor 
-                  href="https://maps.app.goo.gl/oPGbms49BXQhRNT6A"
-                  title="Como chegar no evento?"
-                  target="_blank" 
+                <StyledFooterAnchor
+                  href="/padrinhos-e-madrinhas"
+                  title="Padrinhos & Madrinhas"
+                  target="_blank"
                   rel="noopener noreferrer"
                 >
-                    Como chegar no evento?
+                  Padrinhos & Madrinhas
+                </StyledFooterAnchor>
+              </StyledFooterItem>
+              <StyledFooterItem>
+                <StyledFooterAnchor
+                  href="https://www.casamentos.com.br/web/priscila-e-celso"
+                  title="Confirme sua presença"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Confirme sua presença
+                </StyledFooterAnchor>
+              </StyledFooterItem>
+              <StyledFooterItem>
+                <StyledFooterAnchor
+                  href="https://maps.app.goo.gl/oPGbms49BXQhRNT6A"
+                  title="Como chegar no evento?"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Como chegar no evento?
                 </StyledFooterAnchor>
               </StyledFooterItem>
             </StyledFooterList>
           </StyledFooterMenu>
           <StyledFooterMenu>
-            <StyledFooterCategory>Lista de Presentes</StyledFooterCategory>
+            <StyledFooterCategory>
+              Lista de Presentes
+            </StyledFooterCategory>
             <StyledFooterList>
               <StyledFooterItem>
-                <StyledFooterAnchor 
+                <StyledFooterAnchor
                   href="#"
                   title="Camicado"
-                  target="_blank" 
+                  target="_blank"
                   rel="noopener noreferrer"
                 >
                   Camicado
                 </StyledFooterAnchor>
               </StyledFooterItem>
               <StyledFooterItem>
-                <StyledFooterAnchor 
+                <StyledFooterAnchor
                   href="#"
                   title="TokStok"
-                  target="_blank" 
+                  target="_blank"
                   rel="noopener noreferrer"
                 >
                   TokStok
                 </StyledFooterAnchor>
               </StyledFooterItem>
               <StyledFooterItem>
-                <StyledFooterAnchor 
+                <StyledFooterAnchor
                   href="#"
                   title="Magazine Luiza"
-                  target="_blank" 
+                  target="_blank"
                   rel="noopener noreferrer"
                 >
                   Magazine Luiza
@@ -105,6 +106,6 @@ const Footer = () => {
       </StyledWrapper>
     </StyledFooter>
   );
-}
+};
 
 export default Footer;

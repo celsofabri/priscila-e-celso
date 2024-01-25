@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'gatsby'
-import { StyledWrapper } from 'generic';
+import { Link } from 'gatsby';
+import { StyledWrapper } from 'assets/global/styled';
 import {
   StyledMenu,
   StyledMenuList,
@@ -9,7 +9,6 @@ import {
 } from './styled';
 
 const Menu = ({ isMenuOpen }) => {
-
   return (
     <StyledMenu isMenuOpen={isMenuOpen}>
       <StyledWrapper>
@@ -18,15 +17,19 @@ const Menu = ({ isMenuOpen }) => {
             <StyledMenuAnchor href="/">Home</StyledMenuAnchor>
           </StyledMenuItem>
           <StyledMenuItem>
-            <StyledMenuAnchor href="/nossa-historia">Nossa História</StyledMenuAnchor>
+            <StyledMenuAnchor href="/nossa-historia">
+              Nossa História
+            </StyledMenuAnchor>
           </StyledMenuItem>
           <StyledMenuItem>
-            <StyledMenuAnchor href="/padrinhos-e-madrinhas">Padrinhos & Madrinhas</StyledMenuAnchor>
+            <StyledMenuAnchor href="/padrinhos-e-madrinhas">
+              Padrinhos & Madrinhas
+            </StyledMenuAnchor>
           </StyledMenuItem>
         </StyledMenuList>
       </StyledWrapper>
     </StyledMenu>
-  )
-}
+  );
+};
 
 export default Menu;

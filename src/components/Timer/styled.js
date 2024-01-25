@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 import { fonts, colors } from 'assets/global/tokens';
 import bgHands from 'assets/images/bg-hands.svg';
 

@@ -7,5 +7,5 @@ export const colors = {
   white: '#ffffff',
   black: '#000000',
   blue700: '#072441',
-  red500: '#dd9788',
-}
+  red500: '#dd9788'
+};

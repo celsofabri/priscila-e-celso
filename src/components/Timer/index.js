@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { format, differenceInMilliseconds } from 'date-fns';
-import { StyledWrapper } from 'generic';
+import { StyledWrapper } from 'assets/global/styled';
 import {
   StyledTimer,
   StyledTimerHeader,
@@ -8,7 +8,7 @@ import {
   StyledTimerContent,
   StyledTimerClock,
   StyledTimerFooter
-} from './styled'
+} from './styled';
 
 const Timer = () => {
   const targetDate = new Date('2024-12-14T00:00:00');
@@ -78,6 +78,6 @@ const Timer = () => {
       </StyledWrapper>
     </StyledTimer>
   );
-}
+};
 
 export default Timer;

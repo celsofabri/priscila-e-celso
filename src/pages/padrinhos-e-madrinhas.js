@@ -4,12 +4,11 @@ import People from 'components/People';
 import Footer from 'components/Footer';
 
 const groomsmenAndBridesmaids = () => {
-
   return (
     <React.Fragment>
-      <Header/>
-      <People/>
-      <Footer/>
+      <Header />
+      <People />
+      <Footer />
     </React.Fragment>
   );
 };

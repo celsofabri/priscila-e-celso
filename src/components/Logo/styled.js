@@ -10,4 +10,4 @@ export const StyledLogo = styled.h1`
     height: auto;
     margin: 0;
   }
-`
+`;

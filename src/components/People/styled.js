@@ -7,12 +7,17 @@ export const StyledPeople = styled.section`
 
 export const StyledPeopleHeader = styled.header`
   margin-bottom: 32px;
-`; 
+`;
 
 export const StyledPeopleTitle = styled.h2`
   margin: 0;
   font-family: ${fonts.secondary};
   font-size: 48px;
+  color: ${colors.blue700};
+
+  @media screen and (max-width: 768px) {
+    font-size: 32px;
+  }
 `;
 
 export const StyledPeopleContainer = styled.div`
@@ -77,9 +82,8 @@ export const StyledPeopleName = styled.h4`
 
 export const StyledPeopleDetails = styled.div`
   display: block;
-  color: ${colors.white}
+  color: ${colors.white};
 `;
-
 
 export const StyledPeopleBox = styled.div`
   display: flex;
@@ -93,7 +97,7 @@ export const StyledPeopleBox = styled.div`
     margin-top: 0;
   }
 
-  &:nth-child(2n+1) {
+  &:nth-child(2n + 1) {
     ${StyledPeoplePhoto} {
       order: 1;
 

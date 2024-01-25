@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { StyledWrapper } from 'generic';
-import { 
+import { StyledWrapper } from 'assets/global/styled';
+import {
   StyledPeople,
   StyledPeopleHeader,
   StyledPeopleTitle,
@@ -11,7 +11,7 @@ import {
   StyledPeopleName,
   StyledPeopleDetails
 } from './styled';
-import ImgGroomsmenAndBridesmaids from 'assets/images/img-default-padrinhos-madrinhas.jpg'
+import ImgGroomsmenAndBridesmaids from 'assets/images/img-default-padrinhos-madrinhas.jpg';
 
 const People = () => {
   const [people, setPeople] = useState([]);
@@ -70,7 +70,7 @@ const People = () => {
             return (
               <StyledPeopleBox key={index}>
                 <StyledPeoplePhoto>
-                  <img src={person.photo.url} alt={person.name}/>
+                  <img src={person.photo.url} alt={person.name} />
                 </StyledPeoplePhoto>
                 <StyledPeopleInfo>
                   <StyledPeopleName>{person.name}</StyledPeopleName>
@@ -79,12 +79,12 @@ const People = () => {
                   </StyledPeopleDetails>
                 </StyledPeopleInfo>
               </StyledPeopleBox>
-            )
+            );
           })}
         </StyledWrapper>
       </StyledPeopleContainer>
     </StyledPeople>
   );
-}
+};
 
 export default People;

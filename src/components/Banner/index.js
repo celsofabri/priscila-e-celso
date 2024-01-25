@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { format } from 'date-fns';
-import { StyledWrapper } from 'generic';
+import ptBR from 'date-fns/locale/pt-BR'
+import { StyledWrapper } from 'assets/global/styled';
 import {
   StyledBanner,
   StyledImg,
@@ -63,6 +64,9 @@ const Banner = () => {
   return (
     <React.Fragment>
       {banner.map((item, index) => {
+
+        console.log('item date', item.date)
+
         return (
           <StyledBanner key={index}>
             <StyledWrapper>
@@ -73,7 +77,7 @@ const Banner = () => {
                   <img src={ImgLogo} alt={item.title} />
                 </StyledTitle>
                 <StyledDate>
-                  {format(new Date(item.date), 'dd . MM . yyyy')}
+                  {format(new Date(item.date), 'dd . MMM . yyyy', { locale: ptBR })}
                 </StyledDate>
               </StyledBannerContent>
             </StyledWrapper>

@@ -8,16 +8,15 @@ import Address from 'components/Address';
 import Footer from 'components/Footer';
 
 const Home = () => {
-
   return (
     <React.Fragment>
       <HeaderSimple />
       <Banner />
-      <Schedule/>
-      <Timer/>
-      <RSVP/>
-      <Address/>
-      <Footer/>
+      <Schedule />
+      <Timer />
+      <RSVP />
+      <Address />
+      <Footer />
     </React.Fragment>
   );
 };

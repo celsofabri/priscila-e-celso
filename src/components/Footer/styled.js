@@ -73,11 +73,11 @@ export const StyledFooterItem = styled.li`
 
 export const StyledFooterAnchor = styled.a`
   position: relative;
-  display: inline-block;  
+  display: inline-block;
   font-size: 14px;
   color: ${colors.white};
   text-decoration: none;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 
   &:before {
     position: absolute;
@@ -86,12 +86,11 @@ export const StyledFooterAnchor = styled.a`
     width: 0;
     height: 100%;
     background-color: ${colors.red500};
-    transition: all .2s ease-in-out;
-    content: ''
+    transition: all 0.2s ease-in-out;
+    content: '';
   }
 
   &:hover {
-
     &:before {
       width: 5px;
     }
