@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { fonts } from 'assets/global/tokens';
+import { fonts, colors } from 'assets/global/tokens';
 import ImgFlower from 'assets/images/flower.svg';
 
 export const StyledBanner = styled.div`
@@ -52,7 +52,7 @@ export const StyledTitle = styled.h3`
   font-family: ${fonts.secondary};
   font-size: 100px;
   font-weight: 700;
-  color: #fff;
+  color: ${colors.white};
 
   img {
     max-width: 100%;
@@ -71,7 +71,7 @@ export const StyledSubtitle = styled.h4`
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   font-size: 36px;
-  color: #fff;
+  color: ${colors.white};
   text-transform: uppercase;
 
   &:after {
@@ -81,7 +81,7 @@ export const StyledSubtitle = styled.h4`
     width: 150px;
     height: 1px;
     margin-left: -75px;
-    background-color: #fff;
+    background-color: ${colors.white};
     content: '';
   }
 
@@ -98,7 +98,7 @@ export const StyledDate = styled.h4`
   font-weight: 300;
   font-size: 36px;
   text-transform: uppercase;
-  color: #fff;
+  color: ${colors.white};
   text-transform: uppercase;
 
   &:before {
@@ -108,7 +108,7 @@ export const StyledDate = styled.h4`
     width: 150px;
     height: 1px;
     margin-left: -75px;
-    background-color: #fff;
+    background-color: ${colors.white};
     content: '';
   }
 
