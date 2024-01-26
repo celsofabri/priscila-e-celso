@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkpriscila_e_celso=self.webpackChunkpriscila_e_celso||[]).push([[883],{429:function(e,n,l){l.r(n),l.d(n,{Head:function(){return r}});var t=l(7294),a=l(2061),c=l(3560);n.default=()=>t.createElement(t.Fragment,null,t.createElement(a.Z,null),t.createElement("h2",null,"404"),t.createElement("p",null,"Ooops, página não encontrada."),t.createElement(c.Z,null));const r=()=>t.createElement("title",null,"Página não encontrada | Casamento Priscila & Celso")}}]);
+//# sourceMappingURL=component---src-pages-404-js-3297b76262b81a320a21.js.map
