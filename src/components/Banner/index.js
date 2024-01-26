@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import Loading from 'components/loading';
 import { format } from 'date-fns';
-import ptBR from 'date-fns/locale/pt-BR'
+import ptBR from 'date-fns/locale/pt-BR';
 import { StyledWrapper } from 'assets/global/styled';
 import {
   StyledBanner,
@@ -58,14 +59,13 @@ const Banner = () => {
   }, [query]);
 
   if (banner.length === 0 || !banner) {
-    return 'Carregando...';
+    return <Loading />;
   }
 
   return (
     <React.Fragment>
       {banner.map((item, index) => {
-
-        console.log('item date', item.date)
+        console.log('item date', item.date);
 
         return (
           <StyledBanner key={index}>
@@ -77,7 +77,9 @@ const Banner = () => {
                   <img src={ImgLogo} alt={item.title} />
                 </StyledTitle>
                 <StyledDate>
-                  {format(new Date(item.date), 'dd . MMM . yyyy', { locale: ptBR })}
+                  {format(new Date(item.date), 'dd . MMM . yyyy', {
+                    locale: ptBR
+                  })}
                 </StyledDate>
               </StyledBannerContent>
             </StyledWrapper>

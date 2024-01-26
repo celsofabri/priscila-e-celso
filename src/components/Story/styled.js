@@ -25,7 +25,7 @@ export const StyledStorySubtitle = styled.h3`
   font-family: ${fonts.secondary};
   font-weight: 100;
   font-size: 24px;
-  color: ${colors.red500}
+  color: ${colors.red500};
 `;
 
 export const StyledStoryContent = styled.main`

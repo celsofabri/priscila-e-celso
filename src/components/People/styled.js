@@ -98,9 +98,9 @@ export const StyledPeopleBox = styled.div`
   height: 450px;
   border-radius: 8px;
   overflow: hidden;
-  -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.5);
-  -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.5);
-  box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
 
   &:first-child {
     margin-top: 0;

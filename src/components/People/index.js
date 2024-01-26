@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Loading from 'components/Loading';
 import { StyledWrapper } from 'assets/global/styled';
 import {
   StyledPeople,
@@ -54,7 +55,7 @@ const People = () => {
   }, [query]);
 
   if (people.length === 0 || !people) {
-    return 'Carregando...';
+    return <Loading />;
   }
 
   return (

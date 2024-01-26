@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Loading from 'components/Loading';
 import Markdown from 'react-markdown';
 import { StyledWrapper } from 'assets/global/styled';
 import {
@@ -59,7 +60,7 @@ const Gifts = () => {
   }, [query]);
 
   if (gifts.length === 0 || !gifts) {
-    return 'Carregando...';
+    return <Loading />;
   }
 
   return (
@@ -81,28 +82,29 @@ const Gifts = () => {
                   <StyledGiftsName>{gift?.title}</StyledGiftsName>
                   <StyledGiftsDetails>
                     <Markdown>{gift?.description}</Markdown>
-                    <StyledGiftsPrice>R$ {gift?.price}</StyledGiftsPrice>
+                    <StyledGiftsPrice>
+                      R$ {gift?.price}
+                    </StyledGiftsPrice>
                   </StyledGiftsDetails>
                   <StyledGiftsAction unavaliable={gift?.sold}>
                     {!gift?.sold ? (
-                      <a 
-                        href={gift?.pix} 
+                      <a
+                        href={gift?.pix}
                         title="Quero dar esse!"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         Quero dar esse!
                       </a>
-                    ): (
-                      <a 
-                        href="#" 
-                        title="Não disponível" 
+                    ) : (
+                      <a
+                        href="#"
+                        title="Não disponível"
                         disabled="disabled"
                       >
                         Não disponível
                       </a>
                     )}
-                    
                   </StyledGiftsAction>
                 </StyledGiftsInfo>
               </StyledGiftsBox>

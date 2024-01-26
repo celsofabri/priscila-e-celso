@@ -4,7 +4,6 @@ import Story from 'components/Story';
 import Footer from 'components/Footer';
 
 const OurStory = () => {
-
   return (
     <React.Fragment>
       <Header />

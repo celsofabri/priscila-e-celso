@@ -4,7 +4,6 @@ import Gifts from 'components/Gifts';
 import Footer from 'components/Footer';
 
 const OurStory = () => {
-
   return (
     <React.Fragment>
       <Header />

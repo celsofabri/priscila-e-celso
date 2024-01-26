@@ -71,7 +71,7 @@ const Footer = () => {
               Lista de Presentes
             </StyledFooterCategory>
             <StyledFooterList>
-            <StyledFooterItem>
+              <StyledFooterItem>
                 <StyledFooterAnchor
                   href="/lua-de-mel"
                   title="Lua de Mel"

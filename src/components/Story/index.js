@@ -10,7 +10,7 @@ import {
 } from './styled';
 
 const Story = ({ data }) => {
-  const [ourStory, setOurStory] = useState([])
+  const [ourStory, setOurStory] = useState([]);
   const query = `
     {
       pages(id: "3hGTYzE6je3ZUXL0tujc7I") {
@@ -50,7 +50,9 @@ const Story = ({ data }) => {
       <StyledStoryHeader>
         <StyledWrapper>
           <StyledStoryTitle>{ourStory?.title}</StyledStoryTitle>
-          <StyledStorySubtitle>{ourStory?.subtitle}</StyledStorySubtitle>
+          <StyledStorySubtitle>
+            {ourStory?.subtitle}
+          </StyledStorySubtitle>
         </StyledWrapper>
       </StyledStoryHeader>
       <StyledStoryContent>

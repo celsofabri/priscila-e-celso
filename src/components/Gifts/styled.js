@@ -75,9 +75,9 @@ export const StyledGiftsBox = styled.div`
   margin-top: 32px;
   border-radius: 8px;
   overflow: hidden;
-  -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.5);
-  -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.5);
-  box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
 
   @media screen and (max-width: 1020px) {
     width: 48.5%;
@@ -114,17 +114,19 @@ export const StyledGiftsAction = styled.div`
     }
   }
 
-  ${(props) => props.unavaliable && css`
-    a {
-      color: ${colors.black};
-      background-color: #e8e8e8;
-      pointer-events: none;
-      cursor: not-allowed;
-
-      &:hover {
+  ${(props) =>
+    props.unavaliable &&
+    css`
+      a {
         color: ${colors.black};
         background-color: #e8e8e8;
+        pointer-events: none;
+        cursor: not-allowed;
+
+        &:hover {
+          color: ${colors.black};
+          background-color: #e8e8e8;
+        }
       }
-    }
-  `}
+    `}
 `;
