@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import { StyledWrapper } from 'assets/global/styled';
 import {
   StyledFooter,
@@ -18,7 +19,9 @@ const Footer = () => {
       <StyledWrapper>
         <StyledFooterContainer>
           <StyledFooterLogo>
-            <img src={ImgLogo} alt="Priscila & Celso" />
+            <Link to="/" title="Priscila & Celso">
+              <img src={ImgLogo} alt="Priscila & Celso" />
+            </Link>
           </StyledFooterLogo>
           <StyledFooterMenu>
             <StyledFooterCategory>Casamento</StyledFooterCategory>
@@ -68,6 +71,16 @@ const Footer = () => {
               Lista de Presentes
             </StyledFooterCategory>
             <StyledFooterList>
+            <StyledFooterItem>
+                <StyledFooterAnchor
+                  href="/lua-de-mel"
+                  title="Lua de Mel"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Lua de Mel
+                </StyledFooterAnchor>
+              </StyledFooterItem>
               <StyledFooterItem>
                 <StyledFooterAnchor
                   href="#"
