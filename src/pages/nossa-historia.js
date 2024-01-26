@@ -14,3 +14,5 @@ const OurStory = () => {
 };
 
 export default OurStory;
+
+export const Head = () => <title>Nossa História | Casamento Priscila & Celso</title>;

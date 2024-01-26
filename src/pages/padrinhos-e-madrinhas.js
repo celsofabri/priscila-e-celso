@@ -3,7 +3,7 @@ import Header from 'components/Header';
 import People from 'components/People';
 import Footer from 'components/Footer';
 
-const groomsmenAndBridesmaids = () => {
+const GroomsmenAndBridesmaids = () => {
   return (
     <React.Fragment>
       <Header />
@@ -13,4 +13,6 @@ const groomsmenAndBridesmaids = () => {
   );
 };
 
-export default groomsmenAndBridesmaids;
+export default GroomsmenAndBridesmaids;
+
+export const Head = () => <title>Padrinhos & Madrinhas | Casamento Priscila & Celso</title>;

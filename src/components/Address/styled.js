@@ -12,7 +12,7 @@ export const StyledAddressHeader = styled.section`
   color: ${colors.blue700};
 `;
 
-export const StyledAddressTitle = styled.section`
+export const StyledAddressTitle = styled.h2`
   position: relative;
   z-index: 1;
   margin: 0;
@@ -106,7 +106,6 @@ export const StyledAddressContent = styled.section`
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
-  height: 75vh;
 
   @media screen and (max-width: 768px) {
     height: auto;
@@ -115,7 +114,7 @@ export const StyledAddressContent = styled.section`
 
 export const StyledAddressPlace = styled.div`
   width: 50%;
-  height: 100%;
+  height: auto;
 
   img {
     width: 100%;

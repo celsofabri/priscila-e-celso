@@ -3,7 +3,7 @@ import Header from 'components/Header';
 import Gifts from 'components/Gifts';
 import Footer from 'components/Footer';
 
-const OurStory = () => {
+const HoneyMoon = () => {
   return (
     <React.Fragment>
       <Header />
@@ -13,4 +13,6 @@ const OurStory = () => {
   );
 };
 
-export default OurStory;
+export default HoneyMoon;
+
+export const Head = () => <title>Lua de Mel | Casamento Priscila & Celso</title>;
