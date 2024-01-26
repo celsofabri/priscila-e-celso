@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import { StyledWrapper } from 'assets/global/styled';
 import {
@@ -14,6 +14,59 @@ import {
 import ImgLogo from 'assets/images/priscila-e-celso-logo.svg';
 
 const Footer = () => {
+  const [people, setPeople] = useState([]);
+  const [gifts, setGifts] = useState([]);
+  const query = `
+  {
+      groomsmenAndBridesmaidsCollection {
+        items {
+          name
+          description
+          photo {
+            url
+          }
+        }
+      }
+      giftsCollection {
+        items {
+          title
+          description
+          photo {
+            url
+          },
+          price,
+          sold,
+          pix
+        }
+      }
+    }
+  `;
+
+  useEffect(() => {
+    window
+      .fetch(
+        `https://graphql.contentful.com/content/v1/spaces/bz9d56pnav45/`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization:
+              'Bearer OhHLk8PiunfsccpMwzamwzaCPvAA0f0tskhYWoWEoZk'
+          },
+          body: JSON.stringify({ query })
+        }
+      )
+      .then((response) => response.json())
+      .then(({ data, errors }) => {
+        if (errors) {
+          console.error(errors);
+        }
+
+        setPeople(data.groomsmenAndBridesmaidsCollection.items);
+        setGifts(data.giftsCollection.items);
+      });
+  }, [query]);
+
   return (
     <StyledFooter>
       <StyledWrapper>
@@ -35,15 +88,17 @@ const Footer = () => {
                   Nossa História
                 </StyledFooterAnchor>
               </StyledFooterItem>
-              <StyledFooterItem>
-                <StyledFooterAnchor
-                  href="/padrinhos-e-madrinhas"
-                  title="Padrinhos & Madrinhas"
-                  rel="noopener noreferrer"
-                >
-                  Padrinhos & Madrinhas
-                </StyledFooterAnchor>
-              </StyledFooterItem>
+              {people.length > 0 && (
+                <StyledFooterItem>
+                  <StyledFooterAnchor
+                    href="/padrinhos-e-madrinhas"
+                    title="Padrinhos & Madrinhas"
+                    rel="noopener noreferrer"
+                  >
+                    Padrinhos & Madrinhas
+                  </StyledFooterAnchor>
+                </StyledFooterItem>
+              )}
               <StyledFooterItem>
                 <StyledFooterAnchor
                   href="https://www.casamentos.com.br/web/priscila-e-celso"
@@ -71,15 +126,17 @@ const Footer = () => {
               Lista de Presentes
             </StyledFooterCategory>
             <StyledFooterList>
-              <StyledFooterItem>
-                <StyledFooterAnchor
-                  href="/lua-de-mel"
-                  title="Lua de Mel"
-                  rel="noopener noreferrer"
-                >
-                  Lua de Mel
-                </StyledFooterAnchor>
-              </StyledFooterItem>
+              {gifts.length > 0 && (
+                <StyledFooterItem>
+                  <StyledFooterAnchor
+                    href="/lua-de-mel"
+                    title="Lua de Mel"
+                    rel="noopener noreferrer"
+                  >
+                    Lua de Mel
+                  </StyledFooterAnchor>
+                </StyledFooterItem>
+              )}
               <StyledFooterItem>
                 <StyledFooterAnchor
                   href="#"
