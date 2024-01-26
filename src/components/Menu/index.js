@@ -26,6 +26,11 @@ const Menu = ({ isMenuOpen }) => {
               Padrinhos & Madrinhas
             </StyledMenuAnchor>
           </StyledMenuItem>
+          <StyledMenuItem>
+            <StyledMenuAnchor href="/lua-de-mel">
+              Lua de Mel
+            </StyledMenuAnchor>
+          </StyledMenuItem>
         </StyledMenuList>
       </StyledWrapper>
     </StyledMenu>

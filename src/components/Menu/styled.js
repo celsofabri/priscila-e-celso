@@ -43,7 +43,7 @@ export const StyledMenuList = styled.ul`
 `;
 
 export const StyledMenuItem = styled.li`
-  margin: 20px 0;
+  margin: 50px 0;
   text-align: right;
 `;
 
@@ -53,6 +53,7 @@ export const StyledMenuAnchor = styled.a`
   font-size: 90px;
   font-weight: 900;
   color: ${colors.red500};
+  line-height: 1.2;
   text-transform: lowercase;
   text-decoration: none;
   transition: all 0.4s ease-out;
@@ -70,6 +71,14 @@ export const StyledMenuAnchor = styled.a`
     &:before {
       opacity: 1;
     }
+  }
+
+  @media screen and (max-height: 820px) {
+    font-size: 60px;
+  }
+
+  @media screen and (max-height: 620px) {
+    font-size: 48px;
   }
 
   @media screen and (max-width: 768px) {
