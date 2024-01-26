@@ -75,7 +75,6 @@ const Footer = () => {
                 <StyledFooterAnchor
                   href="/lua-de-mel"
                   title="Lua de Mel"
-                  target="_blank"
                   rel="noopener noreferrer"
                 >
                   Lua de Mel
