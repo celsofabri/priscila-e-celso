@@ -14,14 +14,14 @@ const Header = () => {
         <StyledWrapper>
           <Logo />
           <Burger
-            isMenuOpen={menuOpen}
+            open={menuOpen}
             onClick={() => {
               setMenuOpen(!menuOpen);
             }}
           />
         </StyledWrapper>
       </StyledHeader>
-      <Menu isMenuOpen={menuOpen} />
+      <Menu open={menuOpen} />
     </React.Fragment>
   );
 };

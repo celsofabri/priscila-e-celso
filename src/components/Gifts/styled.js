@@ -115,7 +115,7 @@ export const StyledGiftsAction = styled.div`
   }
 
   ${(props) =>
-    props.unavaliable &&
+    props.$unavaliable &&
     css`
       a {
         color: ${colors.black};

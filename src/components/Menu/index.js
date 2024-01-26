@@ -8,9 +8,9 @@ import {
   StyledMenuAnchor
 } from './styled';
 
-const Menu = ({ isMenuOpen }) => {
+const Menu = ({ open }) => {
   return (
-    <StyledMenu isMenuOpen={isMenuOpen}>
+    <StyledMenu open={open}>
       <StyledWrapper>
         <StyledMenuList>
           <StyledMenuItem>

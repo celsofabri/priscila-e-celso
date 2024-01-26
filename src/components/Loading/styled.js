@@ -31,6 +31,6 @@ export const StyledLoading = styled.div`
   img {
     max-width: 100%;
     height: auto;
-    animation: ${smooth} 2s ease-in-out infinite;
+    animation: ${smooth} 1.5s ease-in-out infinite;
   }
 `;

@@ -21,7 +21,7 @@ export const StyledMenu = styled.nav`
   overflow: auto;
 
   ${(props) =>
-    props.isMenuOpen &&
+    props.open &&
     css`
       opacity: 1;
       visibility: visible;

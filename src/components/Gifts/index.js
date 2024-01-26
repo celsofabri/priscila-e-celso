@@ -86,7 +86,7 @@ const Gifts = () => {
                       R$ {gift?.price}
                     </StyledGiftsPrice>
                   </StyledGiftsDetails>
-                  <StyledGiftsAction unavaliable={gift?.sold}>
+                  <StyledGiftsAction $unavaliable={gift.sold ? 1 : 0}>
                     {!gift?.sold ? (
                       <a
                         href={gift?.pix}

@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyledBurger, StyledBurgerItem } from './styled';
 
-const Burger = ({ isMenuOpen, ...props }) => {
+const Burger = ({ open, ...props }) => {
   return (
-    <StyledBurger isMenuOpen={isMenuOpen} {...props}>
+    <StyledBurger open={open} {...props}>
       <StyledBurgerItem />
     </StyledBurger>
   );

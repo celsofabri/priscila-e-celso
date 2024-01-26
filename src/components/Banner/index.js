@@ -65,8 +65,6 @@ const Banner = () => {
   return (
     <React.Fragment>
       {banner.map((item, index) => {
-        console.log('item date', item.date);
-
         return (
           <StyledBanner key={index}>
             <StyledWrapper>

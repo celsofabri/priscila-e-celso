@@ -39,7 +39,7 @@ export const StyledBurger = styled.button`
   }
 
   ${(props) =>
-    props.isMenuOpen &&
+    props.open &&
     css`
       span {
         opacity: 0;
