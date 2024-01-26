@@ -25,9 +25,12 @@ export const StyledLoading = styled.div`
   align-items: center;
   width: 100%;
   height: 100vh;
+  padding: 32px;
   background-color: ${colors.blue700};
 
-  svg {
+  img {
+    max-width: 100%;
+    height: auto;
     animation: ${smooth} 2s ease-in-out infinite;
   }
 `;
