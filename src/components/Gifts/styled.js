@@ -39,6 +39,10 @@ export const StyledGiftsPhoto = styled.div`
     object-fit: cover;
     object-position: center;
   }
+
+  @media screen and (max-width: 420px) {
+    height: 150px;
+  }
 `;
 
 export const StyledGiftsInfo = styled.div`
@@ -69,7 +73,19 @@ export const StyledGiftsBox = styled.div`
   width: 30%;
   display: block;
   margin-top: 32px;
+  border-radius: 8px;
   overflow: hidden;
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.5);
+
+  @media screen and (max-width: 1020px) {
+    width: 48.5%;
+  }
+
+  @media screen and (max-width: 620px) {
+    width: 100%;
+  }
 `;
 
 export const StyledGiftsPrice = styled.strong`

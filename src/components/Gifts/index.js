@@ -85,9 +85,22 @@ const Gifts = () => {
                   </StyledGiftsDetails>
                   <StyledGiftsAction unavaliable={gift?.sold}>
                     {!gift?.sold ? (
-                      <a href={gift?.pix} title="Quero dar esse!">Quero dar esse!</a>
+                      <a 
+                        href={gift?.pix} 
+                        title="Quero dar esse!"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Quero dar esse!
+                      </a>
                     ): (
-                      <a href="#" title="Não disponível" disabled="disabled">Não disponível</a>
+                      <a 
+                        href="#" 
+                        title="Não disponível" 
+                        disabled="disabled"
+                      >
+                        Não disponível
+                      </a>
                     )}
                     
                   </StyledGiftsAction>
