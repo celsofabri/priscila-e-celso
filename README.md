@@ -1,49 +1,61 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal Starter
-</h1>
+# Wedding Priscila & Celso
 
-## 🚀 Quick start
+My wedding website [Priscila & Celso](https://priscilaecelso.com) 2024.
 
-1.  **Create a Gatsby site.**
+![Celso Fabri Junior](./src/assets/images/priscila-e-celso-logo.svg)
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+This project was bootstrapped with [Gatsby Default Starter](https://github.com/gatsbyjs/gatsby-starter-default).
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+## :checkered_flag: How to start
 
-2.  **Start developing.**
+You need have `node 16+` installed in your machine.
 
-    Navigate into your new site’s directory and start it up.
+1. Clone this project:
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+```
+git clone git@github.com:celsofabri/celsofabri-website.git
+```
 
-3.  **Open the code and start customizing!**
+2. Install dependencies:
 
-    Your site is now running at http://localhost:8000!
+```
+$ yarn
+# or npm install
+```
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+3. Run the project:
 
-4.  **Learn more**
+```
+$ yarn start
+# or npm run start
+# or gatsby develop
+```
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## :tophat: Prettier
 
-## 🚀 Quick start (Netlify)
+Was set up in the project a hook of the `Husky` to format code in the pre-commit. If you want run manually, run the following command:
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
+```
+$ yarn format
+# or npm run format
+```
 
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal)
+## :hammer: Building
+
+To building the project, run the following commands:
+
+```
+$ yarn build
+# or npm run build
+# or gatsby build
+```
+
+## :rocket: Deploying
+
+This project uses gh-pages from GitHub as hosting. After making your changes, you need run:
+
+```
+$ yarn deploy
+```
+
+This command will make the automatic deploy of the branch `gh-pages` and your site will be automatically published.
