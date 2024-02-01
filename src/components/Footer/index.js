@@ -83,9 +83,16 @@ const Footer = () => {
                 <StyledFooterAnchor
                   href="/nossa-historia"
                   title="Nossa História"
-                  rel="noopener noreferrer"
                 >
                   Nossa História
+                </StyledFooterAnchor>
+              </StyledFooterItem>
+              <StyledFooterItem>
+                <StyledFooterAnchor
+                  href="/familia"
+                  title="Família"
+                >
+                  Nossa Família
                 </StyledFooterAnchor>
               </StyledFooterItem>
               {people.length > 0 && (
@@ -93,7 +100,6 @@ const Footer = () => {
                   <StyledFooterAnchor
                     href="/padrinhos-e-madrinhas"
                     title="Padrinhos & Madrinhas"
-                    rel="noopener noreferrer"
                   >
                     Padrinhos & Madrinhas
                   </StyledFooterAnchor>
@@ -131,7 +137,6 @@ const Footer = () => {
                   <StyledFooterAnchor
                     href="/lua-de-mel"
                     title="Lua de Mel"
-                    rel="noopener noreferrer"
                   >
                     Lua de Mel
                   </StyledFooterAnchor>

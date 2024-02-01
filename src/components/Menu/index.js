@@ -74,6 +74,11 @@ const Menu = ({ open }) => {
               Nossa História
             </StyledMenuAnchor>
           </StyledMenuItem>
+          <StyledMenuItem>
+            <StyledMenuAnchor href="/familia">
+              Nossa Família
+            </StyledMenuAnchor>
+          </StyledMenuItem>
           {people.length > 0 && (
             <StyledMenuItem>
               <StyledMenuAnchor href="/padrinhos-e-madrinhas">
