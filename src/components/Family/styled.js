@@ -100,6 +100,9 @@ export const StyledFamilyPhoto = styled.div`
     object-fit: cover;
     object-position: center;
     border-radius: 8px;
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
   }
 `;
 
