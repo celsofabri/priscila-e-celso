@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Loading from 'components/Loading';
 import Markdown from 'react-markdown';
 import { StyledWrapper } from 'assets/global/styled';
 import {
@@ -19,7 +20,6 @@ import {
 const Family = ({ data }) => {
   const [ourFamilyPage, setOurFamilyPage] = useState([]);
   const [ourFamily, setOurFamily] = useState([]);
-  const [ourFamilyByCategory, setOurFamilyByCategory] = useState([]);
   const query = `
     {
       pages(id: "nPHtCWVZYJNcfcqE6iVH7") {
@@ -65,6 +65,10 @@ const Family = ({ data }) => {
       });
   }, [query]);
 
+  if (ourFamily.length === 0 || !ourFamily) {
+    return <Loading />;
+  }
+
   return (
     <StyledFamily>
       <StyledFamilyHeader>
@@ -79,7 +83,6 @@ const Family = ({ data }) => {
         <StyledWrapper>
           <Markdown>{ourFamilyPage.content}</Markdown>
           {ourFamily.map((family, index) => {
-
             return (
               <StyledFamilyBox key={index}>
                 <StyledFamilyCover>

@@ -11,6 +11,7 @@ import {
 const Menu = ({ open }) => {
   const [people, setPeople] = useState([]);
   const [gifts, setGifts] = useState([]);
+  const [family, setFamily] = useState([]);
   const query = `
   {
       groomsmenAndBridesmaidsCollection {
@@ -32,6 +33,16 @@ const Menu = ({ open }) => {
           price,
           sold,
           pix
+        }
+      }
+      familyCollection {
+        items {
+          name
+          relationship
+          photo {
+            url
+          }
+          details
         }
       }
     }
@@ -59,6 +70,7 @@ const Menu = ({ open }) => {
 
         setPeople(data.groomsmenAndBridesmaidsCollection.items);
         setGifts(data.giftsCollection.items);
+        setFamily(data.familyCollection.items)
       });
   }, [query]);
 
@@ -74,11 +86,13 @@ const Menu = ({ open }) => {
               Nossa História
             </StyledMenuAnchor>
           </StyledMenuItem>
-          <StyledMenuItem>
-            <StyledMenuAnchor href="/familia">
-              Nossa Família
-            </StyledMenuAnchor>
-          </StyledMenuItem>
+          {family.length > 0 && (
+            <StyledMenuItem>
+              <StyledMenuAnchor href="/familia">
+                Nossa Família
+              </StyledMenuAnchor>
+            </StyledMenuItem>
+          )}
           {people.length > 0 && (
             <StyledMenuItem>
               <StyledMenuAnchor href="/padrinhos-e-madrinhas">

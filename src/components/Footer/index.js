@@ -16,6 +16,7 @@ import ImgLogo from 'assets/images/priscila-e-celso-logo.svg';
 const Footer = () => {
   const [people, setPeople] = useState([]);
   const [gifts, setGifts] = useState([]);
+  const [family, setFamily] = useState([]);
   const query = `
   {
       groomsmenAndBridesmaidsCollection {
@@ -37,6 +38,16 @@ const Footer = () => {
           price,
           sold,
           pix
+        }
+      }
+      familyCollection {
+        items {
+          name
+          relationship
+          photo {
+            url
+          }
+          details
         }
       }
     }
@@ -64,6 +75,7 @@ const Footer = () => {
 
         setPeople(data.groomsmenAndBridesmaidsCollection.items);
         setGifts(data.giftsCollection.items);
+        setFamily(data.familyCollection.items);
       });
   }, [query]);
 
@@ -87,14 +99,16 @@ const Footer = () => {
                   Nossa História
                 </StyledFooterAnchor>
               </StyledFooterItem>
-              <StyledFooterItem>
-                <StyledFooterAnchor
-                  href="/familia"
-                  title="Família"
-                >
-                  Nossa Família
-                </StyledFooterAnchor>
-              </StyledFooterItem>
+              {family.length > 0 && (
+                <StyledFooterItem>
+                  <StyledFooterAnchor
+                    href="/familia"
+                    title="Família"
+                  >
+                    Nossa Família
+                  </StyledFooterAnchor>
+                </StyledFooterItem>
+              )}
               {people.length > 0 && (
                 <StyledFooterItem>
                   <StyledFooterAnchor
