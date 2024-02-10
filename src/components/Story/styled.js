@@ -44,9 +44,13 @@ export const StyledStoryContent = styled.main`
 
   img {
     display: block;
-    max-width: 80%;
+    max-width: 75%;
     height: auto;
     margin: 0 auto;
+
+    @media screen and (max-width: 768px) {
+      max-width: 100%;
+    }
   }
 
   blockquote {
