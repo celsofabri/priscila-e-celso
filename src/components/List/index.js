@@ -85,7 +85,7 @@ const List = ({ data }) => {
         <StyledList>
           {stores.map((store, index) => {
             return (
-              <StyledListItem>
+              <StyledListItem key={store.name + index}>
                 <StyledListAnchor href={store.url} title={store.name} target={store.target ? '_blank' : '_self'} rel="noopener noreferrer">
                   <StyledListImg src={store.logo.url} alt={store.name}/>
                 </StyledListAnchor>

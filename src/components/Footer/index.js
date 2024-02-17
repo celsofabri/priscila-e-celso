@@ -17,6 +17,7 @@ const Footer = () => {
   const [people, setPeople] = useState([]);
   const [gifts, setGifts] = useState([]);
   const [family, setFamily] = useState([]);
+  const [stores, setStores] = useState([]);
   const query = `
   {
       groomsmenAndBridesmaidsCollection {
@@ -50,6 +51,16 @@ const Footer = () => {
           details
         }
       }
+      storesCollection {
+        items {
+          name
+          url
+          target
+          logo {
+            url
+          }
+        }
+      }
     }
   `;
 
@@ -76,6 +87,7 @@ const Footer = () => {
         setPeople(data.groomsmenAndBridesmaidsCollection.items);
         setGifts(data.giftsCollection.items);
         setFamily(data.familyCollection.items);
+        setStores(data.storesCollection.items);
       });
   }, [query]);
 
@@ -146,46 +158,22 @@ const Footer = () => {
               Lista de Presentes
             </StyledFooterCategory>
             <StyledFooterList>
-              {gifts.length > 0 && (
-                <StyledFooterItem>
-                  <StyledFooterAnchor
-                    href="/lua-de-mel"
-                    title="Lua de Mel"
-                  >
-                    Lua de Mel
-                  </StyledFooterAnchor>
-                </StyledFooterItem>
-              )}
-              <StyledFooterItem>
-                <StyledFooterAnchor
-                  href="#"
-                  title="Camicado"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Camicado
-                </StyledFooterAnchor>
-              </StyledFooterItem>
-              <StyledFooterItem>
-                <StyledFooterAnchor
-                  href="#"
-                  title="TokStok"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  TokStok
-                </StyledFooterAnchor>
-              </StyledFooterItem>
-              <StyledFooterItem>
-                <StyledFooterAnchor
-                  href="#"
-                  title="Magazine Luiza"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Magazine Luiza
-                </StyledFooterAnchor>
-              </StyledFooterItem>
+              {stores.map((store, index) => {
+
+                return (
+                  <StyledFooterItem key={store.name + index}>
+                    <StyledFooterAnchor
+                      href={store.url}
+                      title={store.name}
+                      target={store.target ? '_blank' : '_self'}
+                      rel="noopener noreferrer"
+                    >
+                      {store.name}
+                    </StyledFooterAnchor>
+                  </StyledFooterItem>
+                );
+              })}
+              
             </StyledFooterList>
           </StyledFooterMenu>
         </StyledFooterContainer>
