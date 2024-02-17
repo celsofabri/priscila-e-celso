@@ -29,6 +29,15 @@ export const StyledGiftsSubtitle = styled.h3`
   color: ${colors.red500};
 `;
 
+export const StyledGiftsContent = styled.div`
+  display: block;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+`;
+
 export const StyledList = styled.ul`
   display: flex;
   justify-content: space-around;

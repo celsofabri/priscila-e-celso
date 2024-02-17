@@ -6,6 +6,7 @@ import {
   StyledGiftsHeader,
   StyledGiftsTitle,
   StyledGiftsSubtitle,
+  StyledGiftsContent,
   StyledList, 
   StyledListItem, 
   StyledListAnchor,
@@ -78,9 +79,11 @@ const List = ({ data }) => {
             {giftsListPage.subtitle}
           </StyledGiftsSubtitle>
         </StyledGiftsHeader>
+        <StyledGiftsContent>
+          {giftsListPage.content}
+        </StyledGiftsContent>
         <StyledList>
           {stores.map((store, index) => {
-
             return (
               <StyledListItem>
                 <StyledListAnchor href={store.url} title={store.name} target={store.target ? '_blank' : '_self'} rel="noopener noreferrer">
