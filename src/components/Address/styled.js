@@ -168,7 +168,7 @@ export const StyledAddressInfo = styled.div`
 
     &:hover {
       color: ${colors.white};
-      background-color: ${colors.red500};
+      background-color: ${colors.blue700};
     }
   }
 

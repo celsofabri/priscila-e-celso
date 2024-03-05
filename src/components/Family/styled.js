@@ -43,6 +43,11 @@ export const StyledFamilyCover = styled.header`
   padding-left: 24px;
   margin-bottom: 32px;
   border-left: 45px solid ${colors.red500};
+
+  @media screen and (max-width: 480px) {
+    padding-left: 16px;
+    border-left: 20px solid ${colors.red500};
+  }
 `;
 
 export const StyledFamilyBox = styled.div`
@@ -63,6 +68,10 @@ export const StyledFamilyName = styled.h3`
   margin: 0;
   font-family: ${fonts.secondary};
   font-size: 48px;
+
+  @media screen and (max-width: 480px) {
+    font-size: 32px;
+  }
 `;
 
 export const StyledFamilyRelationship = styled.h4`
@@ -72,7 +81,11 @@ export const StyledFamilyRelationship = styled.h4`
   font-family: ${fonts.primary};
   font-size: 24px;
   font-weight: 300;
-  color: ${colors.red500}
+  color: ${colors.red500};
+
+  @media screen and (max-width: 480px) {
+    font-size: 20px;
+  }
 `;
 
 export const StyledFamilyDetail = styled.div`
@@ -104,9 +117,34 @@ export const StyledFamilyPhoto = styled.div`
     -moz-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
     box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
   }
+
+  @media screen and (max-width: 960px) {
+    width: 100%;
+
+    img {
+      height: 400px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    img {
+      height: 300px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    img {
+      height: 200px;
+    }
+  }
 `;
 
 export const StyledFamilyText = styled.div`
   width: 50%;
   margin: -20px 0;
+
+  @media screen and (max-width: 960px) {
+    width: 100%;
+    margin: 0;
+  }
 `;
