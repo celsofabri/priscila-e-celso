@@ -91,6 +91,7 @@ export const StyledFamilyRelationship = styled.h4`
 export const StyledFamilyDetail = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   width: 100%;
 
@@ -109,7 +110,7 @@ export const StyledFamilyPhoto = styled.div`
   img {
     display: inline-block;
     width: 100%;
-    height: auto;
+    height: 550px;
     object-fit: cover;
     object-position: center;
     border-radius: 8px;
@@ -120,21 +121,11 @@ export const StyledFamilyPhoto = styled.div`
 
   @media screen and (max-width: 960px) {
     width: 100%;
-
-    img {
-      height: 400px;
-    }
   }
-
+  
   @media screen and (max-width: 768px) {
     img {
-      height: 300px;
-    }
-  }
-
-  @media screen and (max-width: 480px) {
-    img {
-      height: 200px;
+      height: auto;
     }
   }
 `;
