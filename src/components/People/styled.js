@@ -95,7 +95,7 @@ export const StyledPeopleBox = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 32px;
-  height: 450px;
+  height: 500px;
   border-radius: 8px;
   overflow: hidden;
   -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
