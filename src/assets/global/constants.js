@@ -215,3 +215,7 @@ export const GUESTS = [
     src: Guests34
   }
 ];
+
+export const GROOMSMENCOLORS = ['#a6a6a6', '#bfbfbf'];
+
+export const BRIDESMAIDSCOLORS = ['#f6b8c3', '#eb91a0'];
