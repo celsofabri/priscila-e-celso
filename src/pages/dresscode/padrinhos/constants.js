@@ -26,4 +26,4 @@ const GROOMSMEN = [
   }
 ];
 
-export default GROOMSMEN
+export default GROOMSMEN;

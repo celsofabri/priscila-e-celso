@@ -6,13 +6,12 @@ import {
   StyledDresscodeGalleryContent
 } from './styled';
 
-const DresscodeGallery = ({ images }) => {
-
+const DresscodeGallery = ({ pageTitle, images }) => {
   return (
     <StyledDresscodeGallery>
       <StyledWrapper>
         <StyledDresscodeGalleryTitle>
-          Madrinhas
+          {pageTitle}
         </StyledDresscodeGalleryTitle>
         <StyledDresscodeGalleryContent>
           {images.map((image, i) => {

@@ -50,4 +50,4 @@ const BRIDESMAIDS = [
   }
 ];
 
-export default BRIDESMAIDS
+export default BRIDESMAIDS;

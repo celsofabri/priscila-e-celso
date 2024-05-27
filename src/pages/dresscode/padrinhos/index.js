@@ -5,11 +5,10 @@ import Footer from 'components/Footer';
 import GROOMSMEN from './constants';
 
 const Groomsmen = () => {
-  
   return (
     <React.Fragment>
       <Header />
-      <DresscodeGallery images={GROOMSMEN} />
+      <DresscodeGallery pageTitle="Padrinhos" images={GROOMSMEN} />
       <Footer />
     </React.Fragment>
   );
