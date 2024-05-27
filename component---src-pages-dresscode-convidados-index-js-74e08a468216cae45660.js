@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkpriscila_e_celso=self.webpackChunkpriscila_e_celso||[]).push([[819],{6793:function(e,l,t){t.r(l),t.d(l,{Head:function(){return c}});var n=t(7294),s=t(2061),a=t(3560);l.default=()=>n.createElement(n.Fragment,null,n.createElement(s.Z,null),n.createElement("p",null,"Guests"),n.createElement(a.Z,null));const c=()=>n.createElement("title",null,"Dresscode - Convidados | Casamento Priscila & Celso")}}]);
+//# sourceMappingURL=component---src-pages-dresscode-convidados-index-js-74e08a468216cae45660.js.map

@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkpriscila_e_celso=self.webpackChunkpriscila_e_celso||[]).push([[554],{9522:function(e,l,t){t.r(l),t.d(l,{Head:function(){return a}});var n=t(7294),c=t(2061),s=t(3560);l.default=()=>n.createElement(n.Fragment,null,n.createElement(c.Z,null),n.createElement("p",null,"Dresscode"),n.createElement(s.Z,null));const a=()=>n.createElement("title",null,"Dresscode | Casamento Priscila & Celso")}}]);
+//# sourceMappingURL=component---src-pages-dresscode-index-js-6de1bde56b9776de4552.js.map
