@@ -15,4 +15,6 @@ const NotFound = () => {
 
 export default NotFound;
 
-export const Head = () => <title>Página não encontrada | Casamento Priscila & Celso</title>;
+export const Head = () => (
+  <title>Página não encontrada | Casamento Priscila & Celso</title>
+);

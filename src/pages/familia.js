@@ -15,4 +15,6 @@ const OurFamily = () => {
 
 export default OurFamily;
 
-export const Head = () => <title>Nossa História | Casamento Priscila & Celso</title>;
+export const Head = () => (
+  <title>Nossa História | Casamento Priscila & Celso</title>
+);

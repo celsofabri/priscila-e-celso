@@ -61,7 +61,7 @@ const Family = ({ data }) => {
         }
 
         setOurFamilyPage(data.pages);
-        setOurFamily(data.familyCollection.items)
+        setOurFamily(data.familyCollection.items);
       });
   }, [query]);
 
@@ -86,8 +86,10 @@ const Family = ({ data }) => {
             return (
               <StyledFamilyBox key={index}>
                 <StyledFamilyCover>
-                    <StyledFamilyName>{family.name}</StyledFamilyName>
-                    <StyledFamilyRelationship>{family.relationship}</StyledFamilyRelationship>
+                  <StyledFamilyName>{family.name}</StyledFamilyName>
+                  <StyledFamilyRelationship>
+                    {family.relationship}
+                  </StyledFamilyRelationship>
                 </StyledFamilyCover>
                 <StyledFamilyDetail>
                   <StyledFamilyPhoto>
@@ -98,7 +100,7 @@ const Family = ({ data }) => {
                   </StyledFamilyText>
                 </StyledFamilyDetail>
               </StyledFamilyBox>
-            )
+            );
           })}
         </StyledWrapper>
       </StyledFamilyContent>

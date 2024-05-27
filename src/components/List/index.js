@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Loading from 'components/Loading';
 import { StyledWrapper } from 'assets/global/styled';
-import { 
-  StyledGifts, 
+import {
+  StyledGifts,
   StyledGiftsHeader,
   StyledGiftsTitle,
   StyledGiftsSubtitle,
   StyledGiftsContent,
-  StyledList, 
-  StyledListItem, 
+  StyledList,
+  StyledListItem,
   StyledListAnchor,
   StyledListImg
 } from './styled';
@@ -62,7 +62,7 @@ const List = ({ data }) => {
         }
 
         setGiftsListPage(data.pages);
-        setStores(data.storesCollection.items)
+        setStores(data.storesCollection.items);
       });
   }, [query]);
 
@@ -86,16 +86,24 @@ const List = ({ data }) => {
           {stores.map((store, index) => {
             return (
               <StyledListItem key={store.name + index}>
-                <StyledListAnchor href={store.url} title={store.name} target={store.target ? '_blank' : '_self'} rel="noopener noreferrer">
-                  <StyledListImg src={store.logo.url} alt={store.name}/>
+                <StyledListAnchor
+                  href={store.url}
+                  title={store.name}
+                  target={store.target ? '_blank' : '_self'}
+                  rel="noopener noreferrer"
+                >
+                  <StyledListImg
+                    src={store.logo.url}
+                    alt={store.name}
+                  />
                 </StyledListAnchor>
               </StyledListItem>
-            )
+            );
           })}
         </StyledList>
       </StyledWrapper>
     </StyledGifts>
-  )
-}
+  );
+};
 
 export default List;

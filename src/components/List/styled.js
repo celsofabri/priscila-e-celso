@@ -82,4 +82,4 @@ export const StyledListImg = styled.img`
   @media screen and (max-width: 768px) {
     max-width: 100%;
   }
-`
+`;

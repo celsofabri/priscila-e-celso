@@ -15,4 +15,6 @@ const GroomsmenAndBridesmaids = () => {
 
 export default GroomsmenAndBridesmaids;
 
-export const Head = () => <title>Padrinhos & Madrinhas | Casamento Priscila & Celso</title>;
+export const Head = () => (
+  <title>Padrinhos & Madrinhas | Casamento Priscila & Celso</title>
+);

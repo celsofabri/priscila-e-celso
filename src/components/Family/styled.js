@@ -55,7 +55,6 @@ export const StyledFamilyBox = styled.div`
   margin: 32px 0;
 
   &:nth-child (2n + 1) {
-
     ${StyledFamilyCover} {
       border-left: 45px solid ${colors.blue700};
     }
@@ -122,7 +121,7 @@ export const StyledFamilyPhoto = styled.div`
   @media screen and (max-width: 960px) {
     width: 100%;
   }
-  
+
   @media screen and (max-width: 768px) {
     img {
       height: auto;

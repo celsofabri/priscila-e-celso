@@ -1,20 +1,19 @@
 import React from 'react';
 import Header from 'components/Header';
-import Story from 'components/Story';
 import Footer from 'components/Footer';
 
-const OurStory = () => {
+const Guests = () => {
   return (
     <React.Fragment>
       <Header />
-      <Story />
+      <p>Guests</p>
       <Footer />
     </React.Fragment>
   );
 };
 
-export default OurStory;
+export default Guests;
 
 export const Head = () => (
-  <title>Nossa História | Casamento Priscila & Celso</title>
+  <title>Dresscode - Convidados | Casamento Priscila & Celso</title>
 );

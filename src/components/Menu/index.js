@@ -70,7 +70,7 @@ const Menu = ({ open }) => {
 
         setPeople(data.groomsmenAndBridesmaidsCollection.items);
         setGifts(data.giftsCollection.items);
-        setFamily(data.familyCollection.items)
+        setFamily(data.familyCollection.items);
       });
   }, [query]);
 

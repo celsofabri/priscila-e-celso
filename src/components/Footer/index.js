@@ -113,10 +113,7 @@ const Footer = () => {
               </StyledFooterItem>
               {family.length > 0 && (
                 <StyledFooterItem>
-                  <StyledFooterAnchor
-                    href="/familia"
-                    title="Família"
-                  >
+                  <StyledFooterAnchor href="/familia" title="Família">
                     Nossa Família
                   </StyledFooterAnchor>
                 </StyledFooterItem>
@@ -159,7 +156,6 @@ const Footer = () => {
             </StyledFooterCategory>
             <StyledFooterList>
               {stores.map((store, index) => {
-
                 return (
                   <StyledFooterItem key={store.name + index}>
                     <StyledFooterAnchor
@@ -173,7 +169,6 @@ const Footer = () => {
                   </StyledFooterItem>
                 );
               })}
-              
             </StyledFooterList>
           </StyledFooterMenu>
         </StyledFooterContainer>

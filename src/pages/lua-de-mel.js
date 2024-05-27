@@ -15,4 +15,6 @@ const HoneyMoon = () => {
 
 export default HoneyMoon;
 
-export const Head = () => <title>Lua de Mel | Casamento Priscila & Celso</title>;
+export const Head = () => (
+  <title>Lua de Mel | Casamento Priscila & Celso</title>
+);
