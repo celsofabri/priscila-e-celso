@@ -16,13 +16,21 @@ import {
 } from './styled';
 
 const Helper = ({ label, description, guide, colors, image }) => {
-  const [isShow, setIsShow] = useState(true);
+  const viewportWidth = window.innerWidth;
+  const isMobile = (width) => {
+    if (width > 768) {
+      return true;
+    }
+    return false;
+  };
+
+  const [helper, setHelper] = useState(isMobile(viewportWidth));
 
   return (
-    <StyledHelper isShow={isShow}>
-      <StyledHelperContainer isShow={isShow}>
+    <StyledHelper helper={helper}>
+      <StyledHelperContainer helper={helper}>
         {label && <StyledHelperTitle>{label}</StyledHelperTitle>}
-        <StyledHelperClose onClick={() => setIsShow(false)}>
+        <StyledHelperClose onClick={() => setHelper(false)}>
           <StyledHelperCloseIcon>-</StyledHelperCloseIcon>
         </StyledHelperClose>
         <StyledHelperContent>
@@ -39,9 +47,10 @@ const Helper = ({ label, description, guide, colors, image }) => {
           )}
           {colors && (
             <StyledHelperColors>
-              {colors.map((color) => {
+              {colors.map((color, i) => {
                 return (
                   <StyledHelperColor
+                    key={i}
                     style={{
                       border: `1px solid ${color}`,
                       backgroundColor: color
@@ -52,13 +61,13 @@ const Helper = ({ label, description, guide, colors, image }) => {
             </StyledHelperColors>
           )}
         </StyledHelperContent>
-        <StyledHelperButton onClick={() => setIsShow(false)}>
+        <StyledHelperButton onClick={() => setHelper(false)}>
           Ok
         </StyledHelperButton>
       </StyledHelperContainer>
       <StyledHelperOpen
-        onClick={() => setIsShow(true)}
-        isShow={isShow}
+        onClick={() => setHelper(true)}
+        helper={helper}
       >
         <StyledHelperOpenIcon>+</StyledHelperOpenIcon>
       </StyledHelperOpen>

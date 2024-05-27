@@ -26,7 +26,9 @@ const DresscodeMenu = () => {
               <img src={ImgBridesmaids} />
             </StyledDresscodeMenuImg>
             <StyledDresscodeMenuBox>
-              <StyledDresscodeMenuLabel>Madrinhas</StyledDresscodeMenuLabel>
+              <StyledDresscodeMenuLabel>
+                Madrinhas
+              </StyledDresscodeMenuLabel>
             </StyledDresscodeMenuBox>
           </StyledDresscodeMenuItem>
           <StyledDresscodeMenuItem to="/dresscode/padrinhos">
@@ -34,7 +36,9 @@ const DresscodeMenu = () => {
               <img src={ImgGroomsmen} />
             </StyledDresscodeMenuImg>
             <StyledDresscodeMenuBox>
-              <StyledDresscodeMenuLabel>Padrinhos</StyledDresscodeMenuLabel>
+              <StyledDresscodeMenuLabel>
+                Padrinhos
+              </StyledDresscodeMenuLabel>
             </StyledDresscodeMenuBox>
           </StyledDresscodeMenuItem>
           <StyledDresscodeMenuItem to="/dresscode/convidados">
@@ -42,7 +46,9 @@ const DresscodeMenu = () => {
               <img src={ImgGuests} />
             </StyledDresscodeMenuImg>
             <StyledDresscodeMenuBox>
-              <StyledDresscodeMenuLabel>Convidados</StyledDresscodeMenuLabel>
+              <StyledDresscodeMenuLabel>
+                Convidados
+              </StyledDresscodeMenuLabel>
             </StyledDresscodeMenuBox>
           </StyledDresscodeMenuItem>
         </StyledDresscodeMenuContainer>

@@ -1,39 +1,48 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { colors, fonts } from 'assets/global/tokens';
 
 export const StyledHelper = styled.div`
   position: fixed;
-  right: 32px;
-  bottom: 32px;
+  right: 16px;
+  bottom: 16px;
   z-index: 100;
-  width: ${(props) => (props.isShow ? '380px' : 'auto')};
+  width: auto;
   height: auto;
-  padding: ${(props) => (props.isShow ? '16px' : '0')};
-  border: ${(props) =>
-    props.isShow ? `1px solid ${colors.red500}` : '0'};
+  padding: 0;
+  border: 0;
   border-radius: 4px;
-  background-color: ${(props) =>
-    props.isShow ? `${colors.white}` : 'transparent'};
+  background-color: transparent;
+
+  ${(props) =>
+    props.helper &&
+    css`
+      display: block;
+      width: 480px;
+      padding: 16px;
+      border: 1px solid ${colors.red500};
+      background-color: ${colors.white};
+    `}
 
   @media screen and (max-width: 768px) {
-    right: ${(props) => (props.isShow ? '0' : '32px')};
-    bottom: ${(props) => (props.isShow ? '0' : '32px')};
-    width: ${(props) => (props.isShow ? '100%' : 'auto')};
-    height: ${(props) => (props.isShow ? '100vh' : 'auto')};
+    right: 32px;
+    bottom: 32px;
+    width: auto;
+    height: auto;
     overflow: auto;
-  }
 
-  @media screen and (max-height: 890px) {
-    width: ${(props) => (props.isShow ? '600px' : 'auto')};
-  }
-
-  @media screen and (max-height: 800px) {
-    width: ${(props) => (props.isShow ? '750px' : 'auto')};
+    ${(props) =>
+      props.helper &&
+      css`
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100vh;
+      `}
   }
 `;
 
 export const StyledHelperContainer = styled.div`
-  display: ${(props) => (props.isShow ? 'block' : 'none')};
+  display: ${(props) => (props.helper ? 'block' : 'none')};
 `;
 
 export const StyledHelperTitle = styled.h4`
@@ -52,7 +61,7 @@ export const StyledHelperClose = styled.button`
   top: -12px;
   right: -12px;
   z-index: 101;
-  display: ${(props) => (props.isShow ? 'none' : 'flex')};
+  display: ${(props) => (props.helper ? 'none' : 'flex')};
   justify-content: center;
   align-items: center;
   width: 32px;
@@ -73,7 +82,7 @@ export const StyledHelperCloseIcon = styled.span`
 `;
 
 export const StyledHelperOpen = styled.button`
-  display: ${(props) => (props.isShow ? 'none' : 'flex')};
+  display: ${(props) => (props.helper ? 'none' : 'flex')};
   justify-content: center;
   align-items: center;
   width: 64px;
@@ -81,7 +90,7 @@ export const StyledHelperOpen = styled.button`
   border: none;
   border-radius: 50%;
   background-color: ${(props) =>
-    props.isShow ? 'transparent' : `${colors.red500}`};
+    props.helper ? 'transparent' : `${colors.red500}`};
   cursor: pointer;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 `;
@@ -103,10 +112,8 @@ export const StyledHelperGuide = styled.div`
     width: auto;
     max-height: 250px;
     margin: 0 auto;
-  }
 
-  @media screen and (max-height: 800px) {
-    img {
+    @media (min-width: 768px) and (max-height: 750px) {
       display: none;
     }
   }
@@ -138,7 +145,7 @@ export const StyledHelperColor = styled.div`
 `;
 
 export const StyledHelperButton = styled.button`
-  display: inline-block;
+  display: block;
   width: 150px;
   margin-top: 32px;
   padding: 16px;
@@ -157,7 +164,11 @@ export const StyledHelperButton = styled.button`
     background-color: ${colors.blue700};
   }
 
-  @media screen and (max-width: 520px) {
+  @media screen and (max-width: 768px) {
     width: 100%;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 `;

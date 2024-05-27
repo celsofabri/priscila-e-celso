@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link } from "gatsby"
+import { Link } from 'gatsby';
 import { colors, fonts } from 'assets/global/tokens';
 
 export const StyledDresscodeMenu = styled.section`
@@ -7,14 +7,14 @@ export const StyledDresscodeMenu = styled.section`
 `;
 
 export const StyledDresscodeMenuTitle = styled.h2`
-margin: 0;
-font-family: ${fonts.secondary};
-font-size: 48px;
-color: ${colors.blue700};
+  margin: 0;
+  font-family: ${fonts.secondary};
+  font-size: 48px;
+  color: ${colors.blue700};
 
-@media screen and (max-width: 768px) {
-  font-size: 32px;
-}
+  @media screen and (max-width: 768px) {
+    font-size: 32px;
+  }
 `;
 
 export const StyledDresscodeMenuContainer = styled.div`

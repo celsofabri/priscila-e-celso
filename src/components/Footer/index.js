@@ -148,14 +148,14 @@ const Footer = () => {
                   Como chegar no evento?
                 </StyledFooterAnchor>
               </StyledFooterItem>
-              {/* <StyledFooterItem>
+              <StyledFooterItem>
                 <StyledFooterAnchor
                   to="/dresscode"
                   title="Dress Code"
                 >
                   Dress Code
                 </StyledFooterAnchor>
-              </StyledFooterItem> */}
+              </StyledFooterItem>
             </StyledFooterList>
           </StyledFooterMenu>
           <StyledFooterMenu>
