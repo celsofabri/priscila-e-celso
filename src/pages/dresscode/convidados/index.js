@@ -1,12 +1,14 @@
 import React from 'react';
 import Header from 'components/Header';
+import DresscodeGallery from 'components/DresscodeGallery';
 import Footer from 'components/Footer';
+import { GUESTS } from 'assets/global/constants';
 
 const Guests = () => {
   return (
     <React.Fragment>
       <Header />
-      <p>Guests</p>
+      <DresscodeGallery pageTitle="Convidados" images={GUESTS} />
       <Footer />
     </React.Fragment>
   );
