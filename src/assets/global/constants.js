@@ -214,4 +214,4 @@ export const GUESTS = [
   {
     src: Guests34
   }
-]
+];
