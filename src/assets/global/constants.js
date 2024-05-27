@@ -219,3 +219,5 @@ export const GUESTS = [
 export const GROOMSMENCOLORS = ['#a6a6a6', '#bfbfbf'];
 
 export const BRIDESMAIDSCOLORS = ['#f6b8c3', '#eb91a0'];
+
+export const GUESTSCOLORS = ['#a6a6a6', '#bfbfbf', '#f6b8c3', '#eb91a0'];
