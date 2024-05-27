@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'gatsby';
 import { StyledWrapper } from 'assets/global/styled';
 import {
   StyledMenu,
@@ -79,34 +78,39 @@ const Menu = ({ open }) => {
       <StyledWrapper>
         <StyledMenuList>
           <StyledMenuItem>
-            <StyledMenuAnchor href="/">Home</StyledMenuAnchor>
+            <StyledMenuAnchor to="/">Home</StyledMenuAnchor>
           </StyledMenuItem>
           <StyledMenuItem>
-            <StyledMenuAnchor href="/nossa-historia">
+            <StyledMenuAnchor to="/nossa-historia">
               Nossa História
             </StyledMenuAnchor>
           </StyledMenuItem>
           {family.length > 0 && (
             <StyledMenuItem>
-              <StyledMenuAnchor href="/familia">
+              <StyledMenuAnchor to="/familia">
                 Nossa Família
               </StyledMenuAnchor>
             </StyledMenuItem>
           )}
           {people.length > 0 && (
             <StyledMenuItem>
-              <StyledMenuAnchor href="/padrinhos-e-madrinhas">
+              <StyledMenuAnchor to="/padrinhos-e-madrinhas">
                 Padrinhos & Madrinhas
               </StyledMenuAnchor>
             </StyledMenuItem>
           )}
           {gifts.length > 0 && (
             <StyledMenuItem>
-              <StyledMenuAnchor href="/lua-de-mel">
+              <StyledMenuAnchor to="/lua-de-mel">
                 Lua de Mel
               </StyledMenuAnchor>
             </StyledMenuItem>
           )}
+          <StyledMenuItem>
+            <StyledMenuAnchor to="/dresscode">
+              Dress Code
+            </StyledMenuAnchor>
+          </StyledMenuItem>
         </StyledMenuList>
       </StyledWrapper>
     </StyledMenu>

@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { Link } from 'gatsby';
 import { colors } from 'assets/global/tokens';
 
 export const StyledMenu = styled.nav`
@@ -29,6 +30,14 @@ export const StyledMenu = styled.nav`
       transform: scale3d(1, 1, 1);
     `}
 
+  @media screen and (max-width: 1200px) {
+    padding: 0 100px;
+  }
+
+  @media screen and (max-width: 890px) {
+    padding: 0 60px;
+  }
+
   @media screen and (max-width: 768px) {
     justify-content: center;
     padding: 0 24px;
@@ -43,11 +52,11 @@ export const StyledMenuList = styled.ul`
 `;
 
 export const StyledMenuItem = styled.li`
-  margin: 50px 0;
+  margin: 30px 0;
   text-align: right;
 
   @media screen and (max-height: 450px) {
-    margin: 30px 0;
+    margin: 20px 0;
   }
 
   @media screen and (max-height: 360px) {
@@ -59,10 +68,10 @@ export const StyledMenuItem = styled.li`
   }
 `;
 
-export const StyledMenuAnchor = styled.a`
+export const StyledMenuAnchor = styled(Link)`
   position: relative;
   display: inline-block;
-  font-size: 90px;
+  font-size: 76px;
   font-weight: 900;
   color: ${colors.red500};
   line-height: 1.2;
@@ -86,11 +95,11 @@ export const StyledMenuAnchor = styled.a`
   }
 
   @media screen and (max-height: 820px) {
-    font-size: 60px;
+    font-size: 52px;
   }
 
   @media screen and (max-height: 620px) {
-    font-size: 48px;
+    font-size: 42px;
   }
 
   @media screen and (max-height: 450px) {
