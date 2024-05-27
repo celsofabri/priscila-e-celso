@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   StyledHelper,
   StyledHelperContainer,
@@ -13,33 +13,38 @@ import {
   StyledHelperColor
 } from './styled';
 
-const Helper = ({ label, description, guide, colors }) => {
+const Helper = ({ label, description, guide, colors, image }) => {
   const [isShow, setIsShow] = useState(true);
 
   return (
     <StyledHelper isShow={isShow}>
       <StyledHelperContainer isShow={isShow}>
-        <StyledHelperTitle>{label}</StyledHelperTitle>
+        {label && <StyledHelperTitle>{label}</StyledHelperTitle>}
         <StyledHelperClose onClick={() => setIsShow(false)}>
           <StyledHelperCloseIcon>-</StyledHelperCloseIcon>
         </StyledHelperClose>
         <StyledHelperContent>
-          <p>{description}</p>
-          <StyledHelperGuide>
-            <p>{guide}</p>
-          </StyledHelperGuide>
-          <StyledHelperColors>
-            {colors.map((color) => {
-              return (
-                <StyledHelperColor
-                  style={{
-                    border: `1px solid ${color}`,
-                    backgroundColor: color
-                  }}
-                ></StyledHelperColor>
-              );
-            })}
-          </StyledHelperColors>
+          {description && <p>{description}</p>}
+          {image && guide && (
+            <StyledHelperGuide>
+              {image && <img src={image} alt={label} />}
+              {guide && <p>{guide}</p>}
+            </StyledHelperGuide>
+          )}
+          {colors && (
+            <StyledHelperColors>
+              {colors.map((color) => {
+                return (
+                  <StyledHelperColor
+                    style={{
+                      border: `1px solid ${color}`,
+                      backgroundColor: color
+                    }}
+                  ></StyledHelperColor>
+                );
+              })}
+            </StyledHelperColors>
+          )}
         </StyledHelperContent>
       </StyledHelperContainer>
       <StyledHelperOpen

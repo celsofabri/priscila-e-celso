@@ -5,8 +5,8 @@ export const StyledHelper = styled.div`
   position: fixed;
   right: 32px;
   bottom: 32px;
-  z-index: 10;
-  width: ${(props) => (props.isShow ? '320px' : 'auto')};
+  z-index: 100;
+  width: ${(props) => (props.isShow ? '380px' : 'auto')};
   height: auto;
   padding: ${(props) => (props.isShow ? '16px' : '0')};
   border: ${(props) =>
@@ -14,6 +14,21 @@ export const StyledHelper = styled.div`
   border-radius: 4px;
   background-color: ${(props) =>
     props.isShow ? `${colors.white}` : 'transparent'};
+
+  @media screen and (max-width: 768px) {
+    right: ${(props) => (props.isShow ? '0' : '32px')};
+    bottom: ${(props) => (props.isShow ? '0' : '32px')};
+    width: ${(props) => (props.isShow ? '100%' : 'auto')};
+    height: ${(props) => (props.isShow ? '100vh' : 'auto')};
+  }
+
+  @media screen and (max-height: 890px) {
+    width: ${(props) => (props.isShow ? '600px' : 'auto')};
+  }
+
+  @media screen and (max-height: 800px) {
+    width: ${(props) => (props.isShow ? '750px' : 'auto')};
+  }
 `;
 
 export const StyledHelperContainer = styled.div`
@@ -31,7 +46,7 @@ export const StyledHelperClose = styled.button`
   position: absolute;
   top: -12px;
   right: -12px;
-  z-index: 11;
+  z-index: 101;
   display: ${(props) => (props.isShow ? 'none' : 'flex')};
   justify-content: center;
   align-items: center;
@@ -41,6 +56,11 @@ export const StyledHelperClose = styled.button`
   border-radius: 50%;
   background-color: ${colors.red500};
   cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    top: 12px;
+    right: 12px;
+  }
 `;
 
 export const StyledHelperCloseIcon = styled.span`
@@ -59,6 +79,7 @@ export const StyledHelperOpen = styled.button`
   background-color: ${(props) =>
     props.isShow ? 'transparent' : `${colors.red500}`};
   cursor: pointer;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 `;
 
 export const StyledHelperOpenIcon = styled.span`
@@ -73,6 +94,20 @@ export const StyledHelperContent = styled.div`
 export const StyledHelperGuide = styled.div`
   font-weight: 700;
   font-style: italic;
+
+  img {
+    width: 100%;
+    max-height: 350px;
+    margin: 0 auto;
+    text-align: center;
+    object-fit: cover;
+  }
+
+  @media screen and (max-height: 800px) {
+    img {
+      display: none;
+    }
+  }
 `;
 
 export const StyledHelperColors = styled.div`
