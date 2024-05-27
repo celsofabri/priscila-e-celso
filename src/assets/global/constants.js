@@ -10,8 +10,14 @@ import Bridesmaids09 from 'assets/images/madrinhas09.jpg';
 import Bridesmaids10 from 'assets/images/madrinhas10.jpg';
 import Bridesmaids11 from 'assets/images/madrinhas11.jpg';
 import Bridesmaids12 from 'assets/images/madrinhas12.jpg';
+import Groomsmen01 from 'assets/images/padrinhos01.jpg';
+import Groomsmen02 from 'assets/images/padrinhos02.jpg';
+import Groomsmen03 from 'assets/images/padrinhos03.jpg';
+import Groomsmen04 from 'assets/images/padrinhos04.jpg';
+import Groomsmen05 from 'assets/images/padrinhos05.jpg';
+import Groomsmen06 from 'assets/images/padrinhos06.jpg';
 
-const BRIDESMAIDS = [
+export const BRIDESMAIDS = [
   {
     src: Bridesmaids01
   },
@@ -50,4 +56,23 @@ const BRIDESMAIDS = [
   }
 ];
 
-export default BRIDESMAIDS;
+export const GROOMSMEN = [
+  {
+    src: Groomsmen01
+  },
+  {
+    src: Groomsmen02
+  },
+  {
+    src: Groomsmen03
+  },
+  {
+    src: Groomsmen04
+  },
+  {
+    src: Groomsmen05
+  },
+  {
+    src: Groomsmen06
+  }
+];

@@ -2,7 +2,7 @@ import React from 'react';
 import Header from 'components/Header';
 import DresscodeGallery from 'components/DresscodeGallery';
 import Footer from 'components/Footer';
-import BRIDESMAIDS from './constants';
+import { BRIDESMAIDS } from 'assets/global/constants';
 
 const Bridesmaids = () => {
   return (
