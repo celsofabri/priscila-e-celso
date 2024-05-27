@@ -20,6 +20,7 @@ export const StyledHelper = styled.div`
     bottom: ${(props) => (props.isShow ? '0' : '32px')};
     width: ${(props) => (props.isShow ? '100%' : 'auto')};
     height: ${(props) => (props.isShow ? '100vh' : 'auto')};
+    overflow: auto;
   }
 
   @media screen and (max-height: 890px) {
@@ -36,10 +37,14 @@ export const StyledHelperContainer = styled.div`
 `;
 
 export const StyledHelperTitle = styled.h4`
-  font-family: ${fonts.secondary};
-  font-size: 24px;
-  color: ${colors.red500};
   margin: 0;
+  font-family: ${fonts.secondary};
+  font-size: 48px;
+  color: ${colors.blue700};
+
+  @media screen and (max-width: 768px) {
+    font-size: 32px;
+  }
 `;
 
 export const StyledHelperClose = styled.button`
@@ -58,8 +63,7 @@ export const StyledHelperClose = styled.button`
   cursor: pointer;
 
   @media screen and (max-width: 768px) {
-    top: 12px;
-    right: 12px;
+    display: none;
   }
 `;
 
@@ -96,11 +100,9 @@ export const StyledHelperGuide = styled.div`
   font-style: italic;
 
   img {
-    width: 100%;
-    max-height: 350px;
+    width: auto;
+    max-height: 250px;
     margin: 0 auto;
-    text-align: center;
-    object-fit: cover;
   }
 
   @media screen and (max-height: 800px) {
@@ -108,6 +110,12 @@ export const StyledHelperGuide = styled.div`
       display: none;
     }
   }
+`;
+
+export const StyledHelperGuideImage = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const StyledHelperColors = styled.div`
@@ -124,7 +132,32 @@ export const StyledHelperColor = styled.div`
   height: 64px;
   border-radius: 50%;
   margin: 8px;
-  -webkit-box-shadow: inset 0px 0px 0px 2px #ffffff;
-  -moz-box-shadow: inset 0px 0px 0px 2px #ffffff;
-  box-shadow: inset 0px 0px 0px 2px #ffffff;
+  -webkit-box-shadow: inset 0px 0px 0px 2px ${colors.white};
+  -moz-box-shadow: inset 0px 0px 0px 2px ${colors.white};
+  box-shadow: inset 0px 0px 0px 2px ${colors.white};
+`;
+
+export const StyledHelperButton = styled.button`
+  display: inline-block;
+  width: 150px;
+  margin-top: 32px;
+  padding: 16px;
+  font-size: 12px;
+  color: ${colors.white};
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: ${colors.red500};
+  border: none;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    color: ${colors.white};
+    background-color: ${colors.blue700};
+  }
+
+  @media screen and (max-width: 520px) {
+    width: 100%;
+  }
 `;

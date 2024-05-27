@@ -1,12 +1,13 @@
 import React from 'react';
 import Header from 'components/Header';
+import DresscodeMenu from 'components/DresscodeMenu';
 import Footer from 'components/Footer';
 
 const Dresscode = () => {
   return (
     <React.Fragment>
       <Header />
-      <p>Dresscode</p>
+      <DresscodeMenu />
       <Footer />
     </React.Fragment>
   );

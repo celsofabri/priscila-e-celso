@@ -9,8 +9,10 @@ import {
   StyledHelperOpenIcon,
   StyledHelperContent,
   StyledHelperGuide,
+  StyledHelperGuideImage,
   StyledHelperColors,
-  StyledHelperColor
+  StyledHelperColor,
+  StyledHelperButton
 } from './styled';
 
 const Helper = ({ label, description, guide, colors, image }) => {
@@ -27,7 +29,11 @@ const Helper = ({ label, description, guide, colors, image }) => {
           {description && <p>{description}</p>}
           {image && guide && (
             <StyledHelperGuide>
-              {image && <img src={image} alt={label} />}
+              {image && (
+                <StyledHelperGuideImage>
+                  <img src={image} alt={label} />
+                </StyledHelperGuideImage>
+              )}
               {guide && <p>{guide}</p>}
             </StyledHelperGuide>
           )}
@@ -46,6 +52,9 @@ const Helper = ({ label, description, guide, colors, image }) => {
             </StyledHelperColors>
           )}
         </StyledHelperContent>
+        <StyledHelperButton onClick={() => setIsShow(false)}>
+          Ok
+        </StyledHelperButton>
       </StyledHelperContainer>
       <StyledHelperOpen
         onClick={() => setIsShow(true)}

@@ -105,7 +105,7 @@ const Footer = () => {
             <StyledFooterList>
               <StyledFooterItem>
                 <StyledFooterAnchor
-                  href="/nossa-historia"
+                  to="/nossa-historia"
                   title="Nossa História"
                 >
                   Nossa História
@@ -113,7 +113,7 @@ const Footer = () => {
               </StyledFooterItem>
               {family.length > 0 && (
                 <StyledFooterItem>
-                  <StyledFooterAnchor href="/familia" title="Família">
+                  <StyledFooterAnchor to="/familia" title="Família">
                     Nossa Família
                   </StyledFooterAnchor>
                 </StyledFooterItem>
@@ -121,7 +121,7 @@ const Footer = () => {
               {people.length > 0 && (
                 <StyledFooterItem>
                   <StyledFooterAnchor
-                    href="/padrinhos-e-madrinhas"
+                    to="/padrinhos-e-madrinhas"
                     title="Padrinhos & Madrinhas"
                   >
                     Padrinhos & Madrinhas
@@ -148,6 +148,14 @@ const Footer = () => {
                   Como chegar no evento?
                 </StyledFooterAnchor>
               </StyledFooterItem>
+              {/* <StyledFooterItem>
+                <StyledFooterAnchor
+                  to="/dresscode"
+                  title="Dress Code"
+                >
+                  Dress Code
+                </StyledFooterAnchor>
+              </StyledFooterItem> */}
             </StyledFooterList>
           </StyledFooterMenu>
           <StyledFooterMenu>

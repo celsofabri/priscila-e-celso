@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 import { colors } from 'assets/global/tokens';
 
 export const StyledFooter = styled.footer`
@@ -71,7 +72,7 @@ export const StyledFooterItem = styled.li`
   }
 `;
 
-export const StyledFooterAnchor = styled.a`
+export const StyledFooterAnchor = styled(Link)`
   position: relative;
   display: inline-block;
   font-size: 14px;
