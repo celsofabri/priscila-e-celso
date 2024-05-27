@@ -6,7 +6,7 @@ export const StyledHelper = styled.div`
   right: 32px;
   bottom: 32px;
   z-index: 10;
-  width: ${(props) => (props.isShow ? '350px' : 'auto')};
+  width: ${(props) => (props.isShow ? '320px' : 'auto')};
   height: auto;
   padding: ${(props) => (props.isShow ? '16px' : '0')};
   border: ${(props) =>
@@ -32,9 +32,11 @@ export const StyledHelperClose = styled.button`
   top: -12px;
   right: -12px;
   z-index: 11;
-  display: ${(props) => (props.isShow ? 'none' : 'block')};
-  width: 24px;
-  height: 24px;
+  display: ${(props) => (props.isShow ? 'none' : 'flex')};
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
   border: none;
   border-radius: 50%;
   background-color: ${colors.red500};
@@ -42,15 +44,8 @@ export const StyledHelperClose = styled.button`
 `;
 
 export const StyledHelperCloseIcon = styled.span`
-  display: block;
-  width: 100%;
-  height: 3px;
-  background-color: ${colors.white};
-
-  &:nth-child(2) {
-    width: 3px;
-    height: 100%;
-  }
+  font-size: 24px;
+  color: ${colors.white};
 `;
 
 export const StyledHelperOpen = styled.button`

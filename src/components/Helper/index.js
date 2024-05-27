@@ -21,7 +21,7 @@ const Helper = ({ label, description, guide, colors }) => {
       <StyledHelperContainer isShow={isShow}>
         <StyledHelperTitle>{label}</StyledHelperTitle>
         <StyledHelperClose onClick={() => setIsShow(false)}>
-          <StyledHelperCloseIcon />
+          <StyledHelperCloseIcon>-</StyledHelperCloseIcon>
         </StyledHelperClose>
         <StyledHelperContent>
           <p>{description}</p>
