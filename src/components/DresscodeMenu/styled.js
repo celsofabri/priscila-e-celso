@@ -25,11 +25,25 @@ export const StyledDresscodeMenuContainer = styled.div`
 `;
 
 export const StyledDresscodeMenuItem = styled(Link)`
-  flex: 1 1 auto;
+  flex: 1 1 33%;
   margin: 8px;
   text-decoration: none;
   border: 1px solid ${colors.red500};
   border-radius: 4px;
+  transition: all .4s ease-in-out;
+
+  &:hover {
+    opacity: .75;
+
+    img {
+      transform: scale(.95);
+      transform: scale3d(.95, .95, .95);
+    }
+  }
+
+  @media screen and (max-width: 520px) {
+    flex: 1 1 100%;
+  }
 `;
 
 export const StyledDresscodeMenuImg = styled.div`
@@ -41,6 +55,9 @@ export const StyledDresscodeMenuImg = styled.div`
   img {
     width: auto;
     max-height: 250px;
+    transform: scale(1);
+    transform: scale3d(1, 1, 1);
+    transition: all .4s ease-in-out;
   }
 `;
 
@@ -50,6 +67,7 @@ export const StyledDresscodeMenuBox = styled.div`
 `;
 
 export const StyledDresscodeMenuLabel = styled.h4`
+  margin: 0;
   font-family: ${fonts.secondary};
   font-size: 32px;
   color: ${colors.blue700};

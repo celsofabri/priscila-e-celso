@@ -18,7 +18,7 @@ const DresscodeMenu = () => {
     <StyledDresscodeMenu>
       <StyledWrapper>
         <StyledDresscodeMenuTitle>
-          Dress Code (Código de Vestimenta)
+          Dress Code
         </StyledDresscodeMenuTitle>
         <StyledDresscodeMenuContainer>
           <StyledDresscodeMenuItem to="/dresscode/madrinhas">
