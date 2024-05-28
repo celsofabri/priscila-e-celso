@@ -5,7 +5,7 @@ export const StyledHelper = styled.div`
   position: fixed;
   right: 16px;
   bottom: 16px;
-  z-index: ${(props) => props.helper ? 100 : 48};
+  z-index: ${(props) => (props.helper ? 100 : 48)};
   width: auto;
   height: auto;
   padding: 0;
