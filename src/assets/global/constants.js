@@ -210,9 +210,6 @@ export const GUESTS = [
   },
   {
     src: Guests33
-  },
-  {
-    src: Guests34
   }
 ];
 
