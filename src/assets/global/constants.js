@@ -49,7 +49,6 @@ import Guests30 from 'assets/images/convidados30.jpg';
 import Guests31 from 'assets/images/convidados31.jpg';
 import Guests32 from 'assets/images/convidados32.jpg';
 import Guests33 from 'assets/images/convidados33.jpg';
-import Guests34 from 'assets/images/convidados34.jpg';
 
 export const BRIDESMAIDS = [
   {
