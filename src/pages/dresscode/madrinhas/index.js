@@ -29,5 +29,5 @@ const Bridesmaids = () => {
 export default Bridesmaids;
 
 export const Head = () => (
-  <title>Dresscode - Madrinhas | Casamento Priscila & Celso</title>
+  <title>Dress Code - Madrinhas | Casamento Priscila & Celso</title>
 );

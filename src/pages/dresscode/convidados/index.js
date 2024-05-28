@@ -26,5 +26,5 @@ const Guests = () => {
 export default Guests;
 
 export const Head = () => (
-  <title>Dresscode - Convidados | Casamento Priscila & Celso</title>
+  <title>Dress Code - Convidados | Casamento Priscila & Celso</title>
 );

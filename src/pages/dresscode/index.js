@@ -16,5 +16,5 @@ const Dresscode = () => {
 export default Dresscode;
 
 export const Head = () => (
-  <title>Dresscode | Casamento Priscila & Celso</title>
+  <title>Dress Code | Casamento Priscila & Celso</title>
 );

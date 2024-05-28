@@ -26,5 +26,5 @@ const Groomsmen = () => {
 export default Groomsmen;
 
 export const Head = () => (
-  <title>Dresscode - Padrinhos | Casamento Priscila & Celso</title>
+  <title>Dress Code - Padrinhos | Casamento Priscila & Celso</title>
 );
