@@ -30,14 +30,14 @@ export const StyledDresscodeMenuItem = styled(Link)`
   text-decoration: none;
   border: 1px solid ${colors.red500};
   border-radius: 4px;
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 
   &:hover {
-    opacity: .75;
+    opacity: 0.75;
 
     img {
-      transform: scale(.95);
-      transform: scale3d(.95, .95, .95);
+      transform: scale(0.95);
+      transform: scale3d(0.95, 0.95, 0.95);
     }
   }
 
@@ -57,7 +57,7 @@ export const StyledDresscodeMenuImg = styled.div`
     max-height: 250px;
     transform: scale(1);
     transform: scale3d(1, 1, 1);
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
   }
 `;
 
