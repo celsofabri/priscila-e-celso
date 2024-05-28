@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   StyledHelper,
   StyledHelperContainer,
@@ -16,18 +16,17 @@ import {
 } from './styled';
 
 const Helper = ({ label, description, guide, colors, image }) => {
-  const [width, setWidth] = useState(window.innerWidth);
-
-  const updateWidth = () => {
-    setWidth(window.innerWidth);
+  const viewportWidth = () => {
+    if (typeof window !== 'undefined') {
+      if (window.innerWidth > 768) {
+        return true;
+      }
+    } else {
+      return false;
+    }
   };
 
-  useEffect(() => {
-    window.addEventListener('resize', updateWidth);
-    return () => window.removeEventListener('resize', updateWidth);
-  }, []);
-
-  const [helper, setHelper] = useState(width > 750 ? true : false);
+  const [helper, setHelper] = useState(viewportWidth);
 
   return (
     <StyledHelper helper={helper}>
