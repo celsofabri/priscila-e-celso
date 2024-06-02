@@ -9,9 +9,9 @@ import {
   StyledDresscodeMenuBox,
   StyledDresscodeMenuLabel
 } from './styled';
-import ImgBridesmaids from 'assets/images/ilustra-madrinhas.svg';
-import ImgGroomsmen from 'assets/images/ilustra-padrinhos.svg';
-import ImgGuests from 'assets/images/ilustra-convidados.png';
+import ImgBridesmaids from 'assets/images/img-madrinhas.jpg';
+import ImgGroomsmen from 'assets/images/img-padrinhos.png';
+import ImgGuests from 'assets/images/img-convidados.jpg';
 
 const DresscodeMenu = () => {
   return (
