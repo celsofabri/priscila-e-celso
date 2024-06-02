@@ -10,7 +10,7 @@ import {
   StyledDresscodeMenuLabel
 } from './styled';
 import ImgBridesmaids from 'assets/images/img-madrinhas.jpg';
-import ImgGroomsmen from 'assets/images/img-padrinhos.png';
+import ImgGroomsmen from 'assets/images/img-padrinhos.jpg';
 import ImgGuests from 'assets/images/img-convidados.jpg';
 
 const DresscodeMenu = () => {
