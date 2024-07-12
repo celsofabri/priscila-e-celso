@@ -17,9 +17,15 @@ import {
 } from './styled';
 
 const NewHome = () => {
+  const [giftsHomePage, setGiftsHomePage] = useState([])
   const [giftsHome, setGiftsHome] = useState([]);
   const query = `
-  {
+    {
+      pages(id: "3V8zSzcfdnbBJwCdi3heEX") {
+        title
+        subtitle
+        content
+      }
       newHomeCollection {
         items {
           title
@@ -54,6 +60,7 @@ const NewHome = () => {
           console.error(errors);
         }
 
+        setGiftsHomePage(data.pages);
         setGiftsHome(data.newHomeCollection.items);
       });
   }, [query]);
@@ -66,7 +73,8 @@ const NewHome = () => {
     <StyledGifts>
       <StyledGiftsHeader>
         <StyledWrapper>
-          <StyledGiftsTitle>Para Nossa Casa</StyledGiftsTitle>
+          <StyledGiftsTitle>{giftsHomePage.title}</StyledGiftsTitle>
+          <div>{giftsHomePage.content}</div>
         </StyledWrapper>
       </StyledGiftsHeader>
       <StyledGiftsContainer>
