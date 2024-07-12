@@ -74,7 +74,9 @@ const NewHome = () => {
       <StyledGiftsHeader>
         <StyledWrapper>
           <StyledGiftsTitle>{giftsHomePage.title}</StyledGiftsTitle>
-          <div>{giftsHomePage.content}</div>
+          {giftsHomePage.content &&
+            (<div>{giftsHomePage.content}</div>)
+          }
         </StyledWrapper>
       </StyledGiftsHeader>
       <StyledGiftsContainer>
