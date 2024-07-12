@@ -10,6 +10,7 @@ import {
 const Menu = ({ open }) => {
   const [people, setPeople] = useState([]);
   const [gifts, setGifts] = useState([]);
+  const [giftsHome, setGiftsHome] = useState([]);
   const [family, setFamily] = useState([]);
   const query = `
   {
@@ -26,6 +27,17 @@ const Menu = ({ open }) => {
         items {
           title
           description
+          photo {
+            url
+          },
+          price,
+          sold,
+          pix
+        }
+      }
+      newHomeCollection {
+        items {
+          title
           photo {
             url
           },
@@ -69,6 +81,7 @@ const Menu = ({ open }) => {
 
         setPeople(data.groomsmenAndBridesmaidsCollection.items);
         setGifts(data.giftsCollection.items);
+        setGiftsHome(data.newHomeCollection.items);
         setFamily(data.familyCollection.items);
       });
   }, [query]);
@@ -103,6 +116,13 @@ const Menu = ({ open }) => {
             <StyledMenuItem>
               <StyledMenuAnchor to="/lua-de-mel">
                 Lua de Mel
+              </StyledMenuAnchor>
+            </StyledMenuItem>
+          )}
+          {giftsHome.length > 0 && (
+            <StyledMenuItem>
+              <StyledMenuAnchor to="/para-nossa-casa">
+                Para Nossa Casa
               </StyledMenuAnchor>
             </StyledMenuItem>
           )}
