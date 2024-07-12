@@ -42,7 +42,8 @@ export const StyledGiftsPhoto = styled.div`
   }
 
   @media screen and (max-width: 420px) {
-    height: 150px;
+    height: auto;
+    padding: 10px 0;
   }
 `;
 
