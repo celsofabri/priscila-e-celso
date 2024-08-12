@@ -55,7 +55,11 @@ const Gifts = () => {
           console.error(errors);
         }
 
-        setGifts(data.giftsCollection.items);
+        const sortedItems = data.giftsCollection.items.sort((a, b) => {
+          return a.sold - b.sold;
+        });
+
+        setGifts(sortedItems);
       });
   }, [query]);
 

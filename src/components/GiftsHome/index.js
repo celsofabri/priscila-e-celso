@@ -17,8 +17,9 @@ import {
 } from './styled';
 
 const NewHome = () => {
-  const [giftsHomePage, setGiftsHomePage] = useState([])
+  const [giftsHomePage, setGiftsHomePage] = useState([]);
   const [giftsHome, setGiftsHome] = useState([]);
+
   const query = `
     {
       pages(id: "3V8zSzcfdnbBJwCdi3heEX") {
@@ -60,8 +61,12 @@ const NewHome = () => {
           console.error(errors);
         }
 
+        const sortedItems = data.newHomeCollection.items.sort((a, b) => {
+          return a.sold - b.sold;
+        });
+
         setGiftsHomePage(data.pages);
-        setGiftsHome(data.newHomeCollection.items);
+        setGiftsHome(sortedItems);
       });
   }, [query]);
 
