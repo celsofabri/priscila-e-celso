@@ -64,14 +64,17 @@ const Banner = () => {
 
   return (
     <React.Fragment>
-      {banner.map((item, index) => {
+      {(() => {
+        const randomIndex = Math.floor(Math.random() * banner.length);
+        const item = banner[randomIndex];
+
         return (
-          <StyledBanner key={index}>
+          <StyledBanner key={randomIndex}>
             <StyledWrapper>
               <StyledImg src={item.photo.url} alt={item.title} />
               <StyledBannerContent>
                 <StyledSubtitle>{item?.subtitle}</StyledSubtitle>
-                <StyledTitle key={index}>
+                <StyledTitle>
                   <img src={ImgLogo} alt={item.title} />
                 </StyledTitle>
                 <StyledDate>
@@ -83,7 +86,7 @@ const Banner = () => {
             </StyledWrapper>
           </StyledBanner>
         );
-      })}
+      })()}
     </React.Fragment>
   );
 };
