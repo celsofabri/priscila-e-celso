@@ -6,7 +6,7 @@ export const StyledMenu = styled.nav`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 49;
+  z-index: 51;
   display: flex;
   justify-content: flex-end;
   align-items: center;
