@@ -6,7 +6,7 @@ export const StyledHeader = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 50;
+  z-index: 100;
   width: 100%;
   padding: 32px 0;
 
