@@ -33,7 +33,7 @@ const Schedule = () => {
           <StyledScheduleItem>
             <img src={ImgRings} alt="Alianças" />
             <StyledScheduleItemTitle>
-              Sábado, 7 de Dezembro
+              Sexta-feira, 22 de Novembro
             </StyledScheduleItemTitle>
             <p>
               O dia de nossa união! Recém-casados no cartório com pais
