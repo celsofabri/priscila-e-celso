@@ -38,11 +38,19 @@ export const StyledGiftsContent = styled.div`
   }
 `;
 
+export const StyledBlock = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 60px 0;
+`;
+
 export const StyledList = styled.ul`
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
   list-style-type: none;
+  width: 45%;
   margin: 0;
   padding: 0;
 
@@ -53,33 +61,39 @@ export const StyledList = styled.ul`
 
 export const StyledListItem = styled.li`
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 30%;
-  height: 300px;
+  width: 100%;
   text-align: center;
-
-  @media screen and (max-width: 768px) {
-    max-width: 45%;
-    height: 200px;
-    margin: 16px 0;
-  }
-
-  @media screen and (max-width: 420px) {
-    max-width: 100%;
-  }
 `;
 
 export const StyledListAnchor = styled.a`
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 8px 16px;
+  color: ${colors.blue700};
+  border: 1px solid ${colors.blue700};
+  border-radius: 30px;
   text-decoration: none;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    color: ${colors.red500};
+    background-color: ${colors.blue700};
+  }
 `;
 
-export const StyledListImg = styled.img`
-  max-width: 75%;
-  height: auto;
+export const StyledQRCode = styled.div`
+  width: 45%;
+  padding: 60px;
+  text-align: center;
+  color: ${colors.white};
+  background-color: ${colors.blue700};
+`;
 
-  @media screen and (max-width: 768px) {
-    max-width: 100%;
-  }
+export const StyledQRCodeImg = styled.img`
+  display: block;
+  max-width: 50%;
+  margin: 0 auto;
 `;

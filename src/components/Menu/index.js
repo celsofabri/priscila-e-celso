@@ -112,23 +112,14 @@ const Menu = ({ open }) => {
               </StyledMenuAnchor>
             </StyledMenuItem>
           )}
-          {gifts.length > 0 && (
-            <StyledMenuItem>
-              <StyledMenuAnchor to="/lua-de-mel">
-                Lua de Mel
-              </StyledMenuAnchor>
-            </StyledMenuItem>
-          )}
-          {giftsHome.length > 0 && (
-            <StyledMenuItem>
-              <StyledMenuAnchor to="/para-nossa-casa">
-                Para Nossa Casa
-              </StyledMenuAnchor>
-            </StyledMenuItem>
-          )}
           <StyledMenuItem>
             <StyledMenuAnchor to="/dresscode">
               Dress Code
+            </StyledMenuAnchor>
+          </StyledMenuItem>
+          <StyledMenuItem>
+            <StyledMenuAnchor to="/lista-de-presentes">
+              Lista de Presentes
             </StyledMenuAnchor>
           </StyledMenuItem>
         </StyledMenuList>

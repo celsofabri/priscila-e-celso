@@ -7,16 +7,14 @@ import {
   StyledGiftsTitle,
   StyledGiftsSubtitle,
   StyledGiftsContent,
+  StyledBlock,
   StyledList,
   StyledListItem,
   StyledListAnchor,
-  StyledListImg
+  StyledQRCode,
+  StyledQRCodeImg
 } from './styled';
-import ImgCamicado from 'assets/images/logo-camicado.png';
-import ImgTokeStok from 'assets/images/logo-tokestok.png';
-import ImgMagalu from 'assets/images/logo-magalu.png';
-import ImgFastShop from 'assets/images/logo-fastshop.png';
-import ImgPix from 'assets/images/logo-pix.png';
+import ImgQrCode from 'assets/images/img-qrcode.jpg'
 
 const List = ({ data }) => {
   const [giftsListPage, setGiftsListPage] = useState([]);
@@ -82,25 +80,30 @@ const List = ({ data }) => {
         <StyledGiftsContent>
           {giftsListPage.content}
         </StyledGiftsContent>
-        <StyledList>
+        <StyledBlock>
+          <StyledList>
           {stores.map((store, index) => {
-            return (
-              <StyledListItem key={store.name + index}>
-                <StyledListAnchor
+            return(
+              <StyledListItem>
+                <StyledListAnchor 
                   href={store.url}
                   title={store.name}
                   target={store.target ? '_blank' : '_self'}
                   rel="noopener noreferrer"
                 >
-                  <StyledListImg
-                    src={store.logo.url}
-                    alt={store.name}
-                  />
+                  {store.name}
                 </StyledListAnchor>
               </StyledListItem>
-            );
+            )
           })}
-        </StyledList>
+          </StyledList>
+          <StyledQRCode>
+            <h3>Use o QR Code do Pix para pagar</h3>
+            <p>Abra o app em que vai fazer a transferência, escaneie a imagem ou cole o código do QR Code</p>
+            <StyledQRCodeImg src={ImgQrCode} alt="QR Code para PIX" />
+            <SytledQRCodeButton>Copiar código do QR Code</SytledQRCodeButton>
+          </StyledQRCode>
+        </StyledBlock>
       </StyledWrapper>
     </StyledGifts>
   );
