@@ -97,3 +97,36 @@ export const StyledQRCodeImg = styled.img`
   max-width: 50%;
   margin: 0 auto;
 `;
+
+export const StyledQRCodeButton = styled.button`
+display: inline-block;
+margin-top: 32px;
+padding: 16px;
+font-size: 12px;
+color: ${colors.white};
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;
+background-color: ${colors.red500};
+border-radius: 10px;
+border: none;
+transition: all 0.2s ease-in-out;
+cursor: pointer;
+
+&:hover {
+  color: ${colors.red500};
+  background-color: ${colors.white};
+}
+`;
+
+export const StyledQRCodeCopied = styled.div`
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  display: inline-block;
+  padding: 16px 32px;
+  color: ${colors.white};
+  text-align: center;
+  border-radius: 4px;
+  background-color: ${colors.red500};
+`

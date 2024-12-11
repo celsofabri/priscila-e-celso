@@ -12,12 +12,14 @@ import {
   StyledListItem,
   StyledListAnchor,
   StyledQRCode,
-  StyledQRCodeImg
+  StyledQRCodeImg,
+  StyledQRCodeButton,
+  StyledQRCodeCopied
 } from './styled';
-import ImgQrCode from 'assets/images/img-qrcode.jpg'
+import ImgQrCode from 'assets/images/img-qrcode.jpg';
 
 const List = ({ data }) => {
-  const [giftsListPage, setGiftsListPage] = useState([]);
+  const [giftsListPage, setGiftsListPage] = useState({});
   const [stores, setStores] = useState([]);
   const query = `
     {
@@ -39,6 +41,21 @@ const List = ({ data }) => {
     }
   `;
 
+  const QRCodeClipboard = "00020126330014BR.GOV.BCB.PIX0111072010139555204000053039865802BR5918Celso Fabri Junior6009SAO PAULO62140510wk9NRzNRhO63044045";
+  const [copySuccess, setCopySuccess] = useState("");
+
+  const copyText = () => {
+    navigator.clipboard.writeText(QRCodeClipboard)
+      .then(() => {
+        setCopySuccess("Texto copiado com sucesso!");
+        setTimeout(() => setCopySuccess(""), 3000);
+      })
+      .catch((err) => {
+        console.error("Falha ao copiar o texto: ", err);
+        setCopySuccess("Erro ao copiar o texto.");
+      });
+  };
+
   useEffect(() => {
     window
       .fetch(
@@ -47,8 +64,7 @@ const List = ({ data }) => {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            Authorization:
-              'Bearer OhHLk8PiunfsccpMwzamwzaCPvAA0f0tskhYWoWEoZk'
+            Authorization: 'Bearer OhHLk8PiunfsccpMwzamwzaCPvAA0f0tskhYWoWEoZk'
           },
           body: JSON.stringify({ query })
         }
@@ -73,18 +89,13 @@ const List = ({ data }) => {
       <StyledWrapper>
         <StyledGiftsHeader>
           <StyledGiftsTitle>{giftsListPage.title}</StyledGiftsTitle>
-          <StyledGiftsSubtitle>
-            {giftsListPage.subtitle}
-          </StyledGiftsSubtitle>
+          <StyledGiftsSubtitle>{giftsListPage.subtitle}</StyledGiftsSubtitle>
         </StyledGiftsHeader>
-        <StyledGiftsContent>
-          {giftsListPage.content}
-        </StyledGiftsContent>
+        <StyledGiftsContent>{giftsListPage.content}</StyledGiftsContent>
         <StyledBlock>
           <StyledList>
-          {stores.map((store, index) => {
-            return(
-              <StyledListItem>
+            {stores.map((store, index) => (
+              <StyledListItem key={index}>
                 <StyledListAnchor 
                   href={store.url}
                   title={store.name}
@@ -94,14 +105,14 @@ const List = ({ data }) => {
                   {store.name}
                 </StyledListAnchor>
               </StyledListItem>
-            )
-          })}
+            ))}
           </StyledList>
           <StyledQRCode>
             <h3>Use o QR Code do Pix para pagar</h3>
             <p>Abra o app em que vai fazer a transferência, escaneie a imagem ou cole o código do QR Code</p>
             <StyledQRCodeImg src={ImgQrCode} alt="QR Code para PIX" />
-            <SytledQRCodeButton>Copiar código do QR Code</SytledQRCodeButton>
+            <StyledQRCodeButton onClick={copyText}>Copiar código do QR Code</StyledQRCodeButton>
+            {copySuccess && <StyledQRCodeCopied>{copySuccess}</StyledQRCodeCopied>}
           </StyledQRCode>
         </StyledBlock>
       </StyledWrapper>
