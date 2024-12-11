@@ -44,6 +44,10 @@ export const StyledBlock = styled.div`
   align-items: center;
   flex-wrap: wrap;
   margin: 60px 0;
+
+  @media screen and (max-width: 960px) {
+    flex-direction: column;
+  }
 `;
 
 export const StyledList = styled.ul`
@@ -53,6 +57,11 @@ export const StyledList = styled.ul`
   width: 45%;
   margin: 0;
   padding: 0;
+
+  @media screen and (max-width: 960px) {
+    width: 100%;
+    margin-bottom: 32px;
+  }
 
   @media screen and (max-width: 768px) {
     justify-content: space-between;
@@ -90,17 +99,20 @@ export const StyledQRCode = styled.div`
   text-align: center;
   color: ${colors.white};
   background-color: ${colors.blue700};
+
+  @media screen and (max-width: 960px) {
+    width: 100%;
+  }
 `;
 
 export const StyledQRCodeImg = styled.img`
   display: block;
   max-width: 50%;
-  margin: 0 auto;
+  margin: 0 auto 32px auto;
 `;
 
 export const StyledQRCodeButton = styled.button`
 display: inline-block;
-margin-top: 32px;
 padding: 16px;
 font-size: 12px;
 color: ${colors.white};
@@ -129,4 +141,8 @@ export const StyledQRCodeCopied = styled.div`
   text-align: center;
   border-radius: 4px;
   background-color: ${colors.red500};
+`
+
+export const StyledQRCodeText = styled.div`
+  margin-top: 16px;
 `

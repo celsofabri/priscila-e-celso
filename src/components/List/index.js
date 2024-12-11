@@ -14,7 +14,8 @@ import {
   StyledQRCode,
   StyledQRCodeImg,
   StyledQRCodeButton,
-  StyledQRCodeCopied
+  StyledQRCodeCopied,
+  StyledQRCodeText
 } from './styled';
 import ImgQrCode from 'assets/images/img-qrcode.jpg';
 
@@ -41,11 +42,12 @@ const List = ({ data }) => {
     }
   `;
 
-  const QRCodeClipboard = "00020126330014BR.GOV.BCB.PIX0111072010139555204000053039865802BR5918Celso Fabri Junior6009SAO PAULO62140510wk9NRzNRhO63044045";
+  const QRCodeClipboard = '00020126330014BR.GOV.BCB.PIX0111072010139555204000053039865802BR5918Celso Fabri Junior6009SAO PAULO62140510wk9NRzNRhO63044045';
+  const Pix = '49cf8b27-9948-4352-8690-65e648bc9f10'
   const [copySuccess, setCopySuccess] = useState("");
 
-  const copyText = () => {
-    navigator.clipboard.writeText(QRCodeClipboard)
+  const CopyToClipboard = (value) => {
+    navigator.clipboard.writeText(value)
       .then(() => {
         setCopySuccess("Texto copiado com sucesso!");
         setTimeout(() => setCopySuccess(""), 3000);
@@ -111,8 +113,16 @@ const List = ({ data }) => {
             <h3>Use o QR Code do Pix para pagar</h3>
             <p>Abra o app em que vai fazer a transferência, escaneie a imagem ou cole o código do QR Code</p>
             <StyledQRCodeImg src={ImgQrCode} alt="QR Code para PIX" />
-            <StyledQRCodeButton onClick={copyText}>Copiar código do QR Code</StyledQRCodeButton>
+            <StyledQRCodeButton onClick={() => CopyToClipboard(QRCodeClipboard)}>Copiar código do QR Code</StyledQRCodeButton>
             {copySuccess && <StyledQRCodeCopied>{copySuccess}</StyledQRCodeCopied>}
+            <StyledQRCodeText>
+              <hr/>
+              <p>
+                Ou se preferir, utilize o código PIX: <br/>
+                <strong>49cf8b27-9948-4352-8690-65e648bc9f10</strong>
+              </p> 
+              <StyledQRCodeButton onClick={() => CopyToClipboard(Pix)}>Copiar chave PIX</StyledQRCodeButton>
+            </StyledQRCodeText>
           </StyledQRCode>
         </StyledBlock>
       </StyledWrapper>
