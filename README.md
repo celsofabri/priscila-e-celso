@@ -13,7 +13,7 @@ You need have `node 16+` installed in your machine.
 1. Clone this project:
 
 ```
-git clone git@github.com:celsofabri/celsofabri-website.git
+git clone git@github.com:celsofabri/priscila-e-celso.git
 ```
 
 2. Install dependencies:
